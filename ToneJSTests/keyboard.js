@@ -3,6 +3,26 @@ let octave = 4;
 const keys = [];
 let prevKey = 0;
 
+const gravity = 1;
+
+let ball =    (() => { return document.getElementById('ball');   })();
+let ball_x =  (() => { return parseInt(ball.getAttribute('cx')); })();
+let ball_y =  (() => { return parseInt(ball.getAttribute('cy')); })();
+let ball_vx = (() => { return parseInt(ball.getAttribute('vx')); })();
+let ball_vy = (() => { return parseInt(ball.getAttribute('vy')); })();
+
+const accelerateBall = () => {
+  ball.setAttribute('vy', ball_vy + 1);
+}
+
+const updateBallPos = () => {
+  var new_ball_x = ball_x + ball_vx
+  var new_ball_y = ball_y + ball_vy
+  var new_ball_vy = ball_vy + gravity
+  ball.setAttribute('cx', new_ball_x)
+  ball.setAttribute('cy', new_ball_y)
+  ball.setAttribute('vy', new_ball_vy)
+}
 
 const notes = [
   'C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4'
@@ -62,6 +82,9 @@ const onKeyDown = (() => {
         keys[ key ] = true;
 
         // TODO: get height here
+        accelerateBall();
+        console.log('onKeyDown' + ball_vy);
+
         let height = 1
         const note = heightToNote( height );
         if ( note ) {
@@ -108,6 +131,14 @@ const onKeyUp = (() => {
   };
 })();
 
+function update() {
+  // console.log('update');
+  updateBallPos();
+
+  const fps = 2
+  setTimeout(update, (1/fps) * 1000);
+}
+
 // Octave controls.
 document.addEventListener( 'keydown', event => {
   // Decrease octave range (min: 0).
@@ -123,5 +154,5 @@ document.addEventListener( 'keydown', event => {
 
   onKeyDown( synth );
   onKeyUp( synth );
+  update();
 })();
-
