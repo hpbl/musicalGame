@@ -5,14 +5,14 @@ instruments = ['saxophone'];
 
 var samples = SampleLibrary.load({
     instruments: instruments,
-    baseUrl: "/ToneJSInstrumentsTests/samples/"
+    baseUrl: "/flappy/sax/samples/"
 });
 
 var current
 // show keyboard on load //
 Tone.Buffer.on('load', function() {
-    document.querySelector(".container").style.display = 'block';
     document.querySelector("#loading").style.display = 'none';
+    document.querySelector("#content").style.display = 'none';
     NProgress.done();
 
     // loop through instruments and set release, connect to master output
@@ -26,9 +26,7 @@ Tone.Buffer.on('load', function() {
 
     current = samples[instruments[0]];
 
-    // select.on('change', function(v) {
-    //     current = samples[v.value];
-    // })
+    startGame()
 })
 
 

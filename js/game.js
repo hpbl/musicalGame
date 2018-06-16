@@ -1,4 +1,4 @@
-window.onload = function() {	
+let startGame = function() {	
 	var game = new Phaser.Game(320, 480, Phaser.CANVAS);
 	var bird;
      // bird gravity, will make bird fall if you don't flap
@@ -6,7 +6,7 @@ window.onload = function() {
      // horizontal bird speed
 	var birdSpeed = 125;
      // flap thrust
-	var birdFlapPower = 100;
+	var birdFlapPower = 150;
      // milliseconds between the creation of two pipes
 	var pipeInterval = 2000;
      // hole between pipes, in puxels
@@ -66,7 +66,9 @@ window.onload = function() {
 		//altura do jogo
 		console.log(game.height);
 		//calculo da nota correspondente
-		console.log(Math.floor((game.height - bird.body.position.y)/(game.height/8)));
+		let noteNumber = Math.floor((game.height - bird.body.position.y)/(game.height/8))
+		console.log(noteNumber);
+		playNote(noteNumber)
 	}
 	
 	function addPipe(){
