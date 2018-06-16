@@ -21,8 +21,8 @@ let startGame = function() {
      
      play.prototype = {
 		preload:function(){
-			game.load.image("bird", "bird.png");
-			game.load.image("pipe", "pipe.png");	
+			game.load.image("bird", "resources/bird.png");
+			game.load.image("pipe", "resources/pipe.png");
 		},
 		create:function(){
 			pipeGroup = game.add.group();

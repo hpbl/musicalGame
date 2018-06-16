@@ -5,7 +5,7 @@ instruments = ['saxophone'];
 
 var samples = SampleLibrary.load({
     instruments: instruments,
-    baseUrl: "/flappy/sax/samples/"
+    baseUrl: "/resources/samples/"
 });
 
 var current
