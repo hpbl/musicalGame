@@ -1,7 +1,7 @@
 NProgress.start();
 // load samples / choose 4 random instruments from the list //
 //chooseFour = ['piano', 'bass-electric', 'bassoon', 'cello', 'clarinet', 'contrabass', 'flute', 'french-horn', 'guitar-acoustic', 'guitar-electric', 'harmonium', 'harp', 'organ', 'saxophone', 'trombone', 'trumpet', 'tuba', 'violin', 'xylophone']
-instruments = ['saxophone'];
+instruments = ['saxophone', 'guitar-electric'];
 
 var samples = SampleLibrary.load({
     instruments: instruments,
@@ -45,12 +45,27 @@ Tone.Buffer.on('error', function() {
 
 // Am scale
 // Lá, Si, Dó, Ré, Mi, Fá, Sol, Lá
-var notes = [
+var AminorScale = [
   'A3', 'B3', 'C3', 'D3', 'E3', 'F3', 'G3', 'A4'
 ];
 
-function playNote(height) {
-    var note = notes[height];
+// Gm scale
+// Sol, Lá, Si♭, Dó, Ré, Mi♭, Fá, Sol
+var GminorScale = [
+    'G2', 'A2', 'A#2', 'C2', 'D1', 'D#2', 'F2', 'G2'
+];
+
+function playNote(height, instrument) {
+    var note;
+    switch (instrument) {
+        case 'saxophone':
+            note = AminorScale[height];
+            break;
+
+        case 'guitar-electric':
+            note = GminorScale[height];
+            break;
+    }
     console.log(note);
     // current.triggerAttack(note);
     current.triggerAttackRelease(note, "0.3")

@@ -68,7 +68,7 @@ let startGame = function() {
 		//calculo da nota correspondente
 		let noteNumber = Math.floor((game.height - bird.body.position.y)/(game.height/8))
 		console.log(noteNumber);
-		playNote(noteNumber)
+		playNote(noteNumber, 'guitar-electric');
 	}
 	
 	function addPipe(){
