@@ -21,7 +21,7 @@ window.onload = function() {
      
      play.prototype = {
 		preload:function(){
-			game.load.image("bird", "buba.png");
+			game.load.image("bird", "bird.png");
 			game.load.image("pipe", "pipe.png");	
 		},
 		create:function(){

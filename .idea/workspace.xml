@@ -2,17 +2,1124 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d87907c-5604-460b-aba3-6a4f3c658861" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/bird.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/game.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/phaser.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/phaser.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flappy/pipe.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/phaser.min.js" />
-      <change beforePath="$PROJECT_DIR$/ToneJSTests/keyboard.html" afterPath="$PROJECT_DIR$/ToneJSTests/keyboard.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/flappy/game.js" afterPath="$PROJECT_DIR$/flappy/game.js" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/index.d.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/umd/eventemitter3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/umd/eventemitter3.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/eventemitter3/umd/eventemitter3.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/CHANGELOG.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser-arcade-physics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser-arcade-physics.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser-core.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser-core.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/dist/phaser.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/license.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/phaser-logo-small.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/scripts/bundle-shaders.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/scripts/copy-to-examples.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/scripts/help.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/scripts/support.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/Angle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/Call.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/GetFirst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/GetLast.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/GridAlign.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/IncAlpha.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/IncX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/IncXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/IncY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlaceOnCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlaceOnEllipse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlaceOnLine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlaceOnRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlaceOnTriangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PlayAnimation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PropertyValueInc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/PropertyValueSet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RandomCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RandomEllipse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RandomLine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RandomRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RandomTriangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/Rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RotateAround.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/RotateAroundDistance.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/ScaleX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/ScaleXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/ScaleY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetAlpha.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetBlendMode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetDepth.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetHitArea.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetOrigin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetRotation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetScale.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetScaleX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetScaleY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetTint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetVisible.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SetY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/ShiftPosition.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/Shuffle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SmoothStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/SmootherStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/Spread.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/ToggleVisible.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/WrapInRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/actions/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/animations/Animation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/animations/AnimationFrame.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/animations/AnimationManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/animations/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/Config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/CreateRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/DebugHeader.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/Game.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/TimeStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/VisibilityHandler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/boot/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cache/BaseCache.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cache/CacheManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cache/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/Camera.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/CameraManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/effects/Fade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/effects/Flash.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/effects/Shake.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/effects/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/2d/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/controls/FixedKeyControl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/controls/SmoothedKeyControl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/controls/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/sprite3d/Camera.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/sprite3d/CameraManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/sprite3d/OrthographicCamera.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/sprite3d/PerspectiveCamera.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/cameras/sprite3d/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/GenerateTexture.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/Arne16.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/C64.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/CGA.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/JMP.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/MSX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/create/palettes/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/CubicBezierCurve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/Curve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/EllipseCurve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/LineCurve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/QuadraticBezierCurve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/SplineCurve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/path/MoveTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/curves/path/Path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/data/DataManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/data/DataManagerPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/data/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Audio.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Browser.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/CanvasFeatures.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Features.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Fullscreen.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Input.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/OS.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/Video.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/device/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/BottomCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/BottomLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/BottomRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/Center.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/LeftCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/QuickSet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/RightCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/TopCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/TopLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/TopRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/in/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/BottomCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/BottomLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/BottomRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/LeftBottom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/LeftCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/LeftTop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/RightBottom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/RightCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/RightTop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/TopCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/TopLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/TopRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/align/to/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/CenterOn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetBottom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetCenterX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetCenterY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetOffsetX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetOffsetY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/GetTop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetBottom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetCenterX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetCenterY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/SetTop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/bounds/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/CanvasInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/CanvasPool.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/Smoothing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/TouchAction.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/UserSelect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/canvas/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/Color.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/ColorToRGBA.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/ComponentToHex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/GetColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/GetColor32.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/HSLToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/HSVColorWheel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/HSVToRGB.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/HexStringToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/HueToComponent.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/IntegerToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/IntegerToRGB.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/Interpolate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/ObjectToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/RGBStringToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/RGBToHSV.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/RGBToString.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/RandomRGB.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/ValueToColor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/color/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/mask/BitmapMask.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/mask/GeometryMask.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/display/mask/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/AddToDOM.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/DOMContentLoaded.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/ParseXML.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/RemoveFromDOM.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/RequestAnimationFrame.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/dom/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/events/EventEmitter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/events/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/BuildGameObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/BuildGameObjectAnimation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/DisplayList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/GameObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/GameObjectCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/GameObjectFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/UpdateList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/GetBitmapTextSize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/ParseFromAtlas.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/ParseRetroFont.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/ParseXMLBitmapFont.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/RetroFont.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapText.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapText.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/Blitter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/BlitterCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/BlitterCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/BlitterFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/BlitterRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/BlitterWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/blitter/Bob.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Alpha.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Animation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/BlendMode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/ComputedSize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Depth.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Flip.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/GetBounds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Mask.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/MatrixStack.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Origin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Pipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/ScaleMode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/ScrollFactor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Size.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Texture.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Tint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/ToJSON.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Transform.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/TransformMatrix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/Visible.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/Container.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/ContainerCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/ContainerCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/ContainerFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/ContainerRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/container/ContainerWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/Commands.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/Graphics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/GraphicsCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/GraphicsCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/GraphicsFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/GraphicsRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/graphics/GraphicsWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/group/Group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/group/GroupCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/group/GroupFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/Image.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/ImageCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/ImageCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/ImageFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/ImageRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/image/ImageWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/lights/Light.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/lights/LightsManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/lights/LightsPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/Mesh.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/MeshCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/MeshCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/MeshFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/MeshRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/mesh/MeshWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/EmitterOp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/GravityWell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/Particle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleEmitter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleEmitterManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleManagerCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleManagerCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleManagerFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleManagerRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/ParticleManagerWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/zones/DeathZone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/zones/EdgeZone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/zones/RandomZone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/particles/zones/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/pathfollower/PathFollower.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/pathfollower/PathFollowerFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/quad/Quad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/quad/QuadCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/quad/QuadFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTexture.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureCanvas.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureWebGL.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/rendertexture/RenderTextureWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/Sprite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/SpriteCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/SpriteCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/SpriteFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/SpriteRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite/SpriteWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite3d/Sprite3D.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite3d/Sprite3DCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/sprite3d/Sprite3DFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/GetTextSize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/MeasureText.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/TextStyle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/Text.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/TextCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/TextCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/TextFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/TextRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/text/static/TextWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSprite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSpriteCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSpriteCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSpriteFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSpriteRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/tilesprite/TileSpriteWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/zone/Zone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/zone/ZoneCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/gameobjects/zone/ZoneFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Area.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Circle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Circumference.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/CircumferencePoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Contains.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/ContainsPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/ContainsRect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/GetBounds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/GetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/GetPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/OffsetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/Random.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/circle/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Area.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Circumference.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/CircumferencePoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Contains.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/ContainsPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/ContainsRect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Ellipse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/GetBounds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/GetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/GetPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/OffsetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/Random.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/ellipse/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/CircleToCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/CircleToRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/GetRectangleIntersection.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/LineToCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/LineToLine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/LineToRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/PointToLine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/PointToLineSegment.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/RectangleToRectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/RectangleToTriangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/RectangleToValues.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/TriangleToCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/TriangleToLine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/TriangleToTriangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/intersects/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Angle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/BresenhamPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/CenterOn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/GetMidPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/GetNormal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/GetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/GetPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Height.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Length.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Line.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/NormalAngle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/NormalX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/NormalY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/PerpSlope.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Random.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/ReflectAngle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/RotateAroundPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/RotateAroundXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/SetToAngle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Slope.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/Width.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/line/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Ceil.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Floor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/GetCentroid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/GetMagnitude.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/GetMagnitudeSq.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/GetRectangleFromPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Interpolate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Invert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Negative.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Point.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/Project.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/ProjectUnit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/SetMagnitude.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/point/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/Contains.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/ContainsPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/Earcut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/GetAABB.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/GetNumberArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/Polygon.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/Reverse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/polygon/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Area.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Ceil.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/CeilAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/CenterOn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Contains.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/ContainsPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/ContainsRect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Decompose.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/FitInside.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/FitOutside.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Floor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/FloorAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/FromPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/GetAspectRatio.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/GetCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/GetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/GetPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/GetSize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Inflate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/MarchingAnts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/MergePoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/MergeRect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/MergeXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/OffsetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Overlaps.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Perimeter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/PerimeterPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Random.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/RandomOutside.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Rectangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Scale.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/Union.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/rectangle/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Area.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/BuildEquilateral.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/BuildFromPolygon.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/BuildRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/CenterOn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Centroid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/CircumCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/CircumCircle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Contains.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/ContainsArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/ContainsPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/CopyFrom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Decompose.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Equals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/GetPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/GetPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/InCenter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Perimeter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Random.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/RotateAroundPoint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/RotateAroundXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/Triangle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/geom/triangle/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/CreateInteractiveObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/CreatePixelPerfectHandler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/InputManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/InputPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/InputPluginCache.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/Pointer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/Axis.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/Button.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/Gamepad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/GamepadPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/configs/SNES_USB_Controller.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/configs/XBox360_Controller.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/configs/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/gamepad/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/KeyboardPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/combo/AdvanceKeyCombo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/combo/KeyCombo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/combo/ProcessKeyCombo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/combo/ResetKeyCombo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/DownDuration.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/JustDown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/JustUp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/Key.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/KeyCodes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/KeyMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/ProcessKeyDown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/ProcessKeyUp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/keyboard/keys/UpDuration.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/mouse/MouseManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/mouse/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/touch/TouchManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/input/touch/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/File.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/FileTypesManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/GetURL.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/LoaderPlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/MergeXHRSettings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/MultiFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/XHRLoader.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/XHRSettings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/AnimationJSONFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/AtlasJSONFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/AtlasXMLFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/AudioFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/AudioSpriteFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/BinaryFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/BitmapFontFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/GLSLFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/HTML5AudioFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/HTMLFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/ImageFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/JSONFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/MultiAtlasFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/PackFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/PluginFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/SVGFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/ScenePluginFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/ScriptFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/SpriteSheetFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/TextFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/TilemapCSVFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/TilemapImpactFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/TilemapJSONFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/UnityAtlasFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/XMLFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/filetypes/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/loader/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Average.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Bernstein.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Between.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/CatmullRom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/CeilTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Clamp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/DegToRad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Difference.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Factorial.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/FloatBetween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/FloorTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/FromPercent.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/GetSpeed.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/IsEven.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/IsEvenStrict.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Linear.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Matrix3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Matrix4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/MaxAdd.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/MinSub.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Percent.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Quaternion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RadToDeg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RandomXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RandomXYZ.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RandomXYZW.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RotateAround.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RotateAroundDistance.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RotateVec3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RoundAwayFromZero.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/RoundTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/SinCosTableGenerator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/SmoothStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/SmootherStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/TransformXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Vector2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Vector3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Vector4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Within.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/Wrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/Between.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/BetweenPoints.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/BetweenPointsY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/BetweenY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/Normalize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/Reverse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/RotateTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/ShortestBetween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/Wrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/WrapDegrees.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/angle/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/distance/DistanceBetween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/distance/DistancePower.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/distance/DistanceSquared.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/distance/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/EaseMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/back/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/back/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/back/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/back/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/bounce/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/bounce/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/bounce/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/bounce/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/circular/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/circular/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/circular/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/circular/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/cubic/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/cubic/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/cubic/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/cubic/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/elastic/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/elastic/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/elastic/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/elastic/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/expo/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/expo/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/expo/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/expo/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/linear/Linear.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/linear/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quadratic/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quadratic/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quadratic/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quadratic/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quartic/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quartic/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quartic/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quartic/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quintic/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quintic/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quintic/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/quintic/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/sine/In.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/sine/InOut.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/sine/Out.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/sine/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/stepped/Stepped.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/easing/stepped/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/Ceil.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/Equal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/Floor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/GreaterThan.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/LessThan.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/fuzzy/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/BezierInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/CatmullRomInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/CubicBezierInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/LinearInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/QuadraticBezierInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/SmoothStepInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/SmootherStepInterpolation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/interpolation/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/pow2/GetPowerOfTwo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/pow2/IsSizePowerOfTwo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/pow2/IsValuePowerOfTwo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/pow2/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/random-data-generator/RandomDataGenerator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/snap/SnapCeil.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/snap/SnapFloor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/snap/SnapTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/math/snap/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/phaser-arcade-physics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/phaser-core.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/phaser.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/ArcadeImage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/ArcadePhysics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/ArcadeSprite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/Body.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/Collider.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/Factory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/GetOverlapX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/GetOverlapY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/PhysicsGroup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/SeparateX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/SeparateY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/StaticBody.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/StaticPhysicsGroup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/World.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Acceleration.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Angular.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Bounce.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Debug.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Drag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Enable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Friction.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Gravity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Immovable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Mass.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Size.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/Velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/ProcessTileCallbacks.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/ProcessTileSeparationX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/ProcessTileSeparationY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/SeparateTile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/TileCheckX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/TileCheckY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/TileIntersectsBody.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/arcade/tilemap/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/Body.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/COLLIDES.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/CollisionMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/DefaultDefs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/Factory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/GetVelocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/ImpactBody.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/ImpactImage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/ImpactPhysics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/ImpactSprite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/SeperateX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/SeperateY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/Solver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/TYPE.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/UpdateMotion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/World.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Acceleration.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/BodyScale.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/BodyType.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Bounce.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/CheckAgainst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Collides.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Debug.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Friction.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Gravity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Offset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/SetGameObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/Velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/impact/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/CustomMain.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/Factory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/MatterGameObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/MatterImage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/MatterPhysics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/MatterSprite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/MatterTileBody.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/PhysicsEditorParser.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/PointerConstraint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/World.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Bounce.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Collision.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Force.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Friction.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Gravity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Mass.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Sensor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/SetBody.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Sleep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Static.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Transform.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/Velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/body/Body.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/body/Composite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/body/World.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Detector.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Grid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Pair.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Pairs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Query.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/Resolver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/collision/SAT.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/constraint/Constraint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/constraint/MouseConstraint.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Common.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Engine.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Events.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Matter.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Metrics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Plugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Runner.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/core/Sleeping.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/factory/Bodies.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/factory/Composites.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/geometry/Axes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/geometry/Bounds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/geometry/Svg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/geometry/Vector.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/geometry/Vertices.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/license.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/plugins/MatterAttractors.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/plugins/MatterWrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/lib/render/Render.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/physics/matter-js/poly-decomp/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/BasePlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/DefaultPlugins.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/PluginCache.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/PluginManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/ScenePlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/plugins/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/Array.forEach.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/Array.isArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/AudioContextMonkeyPatch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/Function.bind.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/Math.trunc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/Uint32Array.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/console.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/performance.now.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/polyfills/requestAnimationFrame.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/BlendModes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/ScaleModes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/canvas/CanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/canvas/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/canvas/utils/BlitImage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/canvas/utils/DrawImage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/canvas/utils/GetBlendModes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/snapshot/CanvasSnapshot.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/snapshot/WebGLSnapshot.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/snapshot/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/Utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/WebGLPipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/WebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/BitmapMaskPipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/FlatTintPipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/ForwardDiffuseLightPipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/TextureTintPipeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/components/ModelViewProjection.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/pipelines/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/BitmapMask-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/BitmapMask-vert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/DeferredDiffuse-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/DeferredDiffuse-vert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/FlatTint-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/FlatTint-vert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/ForwardDiffuse-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/GBuffer-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/TextureTint-frag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/TextureTint-vert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/BitmapMask.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/BitmapMask.vert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/DeferredDiffuse.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/DeferredDiffuse.vert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/FlatTint.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/FlatTint.vert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/ForwardDiffuse.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/GBuffer.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/TextureTint.frag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/renderer/webgl/shaders/src/TextureTint.vert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/GetPhysicsPlugins.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/GetScenePlugins.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/InjectionMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/Scene.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/SceneManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/ScenePlugin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/Settings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/Systems.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/scene/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/BaseSound.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/BaseSoundManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/SoundManagerCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/html5/HTML5AudioSound.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/html5/HTML5AudioSoundManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/noaudio/NoAudioSound.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/noaudio/NoAudioSoundManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/webaudio/WebAudioSound.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/sound/webaudio/WebAudioSoundManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/List.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/Map.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/ProcessQueue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/RTree.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/Set.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/structs/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/CanvasTexture.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/Frame.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/Texture.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/TextureManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/TextureSource.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/AtlasXML.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/Canvas.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/Image.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/JSONArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/JSONHash.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/SpriteSheet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/SpriteSheetFromAtlas.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/UnityYAML.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/textures/parsers/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/Formats.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/ImageCollection.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/ParseToTilemap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/Tile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/Tilemap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/TilemapCreator.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/TilemapFactory.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/Tileset.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/CalculateFacesAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/CalculateFacesWithin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/Copy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/CreateFromTiles.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/CullTiles.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/Fill.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/FilterTiles.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/FindByIndex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/FindTile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/ForEachTile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/GetTileAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/GetTileAtWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/GetTilesWithin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/GetTilesWithinShape.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/GetTilesWithinWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/HasTileAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/HasTileAtWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/IsInLayerBounds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/PutTileAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/PutTileAtWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/PutTilesAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/Randomize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/RemoveTileAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/RemoveTileAtWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/RenderDebug.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/ReplaceByIndex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetCollision.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetCollisionBetween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetCollisionByExclusion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetCollisionByProperty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetCollisionFromCollisionGroup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetLayerCollisionIndex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetTileCollision.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetTileIndexCallback.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SetTileLocationCallback.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/Shuffle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/SwapByIndex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/TileToWorldX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/TileToWorldXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/TileToWorldY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/WeightedRandomize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/WorldToTileX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/WorldToTileXY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/WorldToTileY.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/dynamiclayer/DynamicTilemapLayer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/dynamiclayer/DynamicTilemapLayerCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/dynamiclayer/DynamicTilemapLayerRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/dynamiclayer/DynamicTilemapLayerWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/mapdata/LayerData.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/mapdata/MapData.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/mapdata/ObjectLayer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/Parse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/Parse2DArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/ParseCSV.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/impact/ParseTileLayers.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/impact/ParseTilesets.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/impact/ParseWeltmeister.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/AssignTileProperties.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/Base64Decode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/BuildTilesetIndex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseGID.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseImageLayers.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseJSONTiled.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseObjectLayers.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseTileLayers.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/parsers/tiled/Pick.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/staticlayer/StaticTilemapLayer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/staticlayer/StaticTilemapLayerCanvasRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/staticlayer/StaticTilemapLayerRender.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tilemaps/staticlayer/StaticTilemapLayerWebGLRenderer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/time/Clock.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/time/TimerEvent.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/time/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/Timeline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/TweenManager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetBoolean.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetEaseFunction.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetNewValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetProps.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetTargets.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetTweens.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/GetValueOp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/NumberTweenBuilder.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/TimelineBuilder.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/TweenBuilder.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/builders/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/tween/Defaults.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/tween/ReservedProps.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/tween/Tween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/tween/TweenData.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/tweens/tween/const.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/Class.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/NOOP.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Add.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/AddAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/BringToTop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/CountAllMatching.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Each.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/EachInRange.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/FindClosestInSorted.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/GetAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/GetFirst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/GetRandom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/MoveDown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/MoveTo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/MoveUp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/NumberArray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/NumberArrayStep.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/QuickSelect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Range.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Remove.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/RemoveAt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/RemoveBetween.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/RemoveRandomElement.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Replace.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/RotateLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/RotateRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/SafeRange.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/SendToBack.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/SetAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Shuffle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/SpliceOne.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/StableSort.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/Swap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/CheckMatrix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/MatrixToString.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/ReverseColumns.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/ReverseRows.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/Rotate180.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/RotateLeft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/RotateMatrix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/RotateRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/TransposeMatrix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/array/matrix/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/Clone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/Extend.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/GetAdvancedValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/GetFastValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/GetMinMaxValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/GetValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/HasAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/HasAny.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/HasValue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/IsPlainObject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/Merge.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/MergeRight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/object/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/string/Format.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/string/Pad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/string/Reverse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/string/UppercaseFirst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/src/utils/string/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/webpack.config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/webpack.dist.config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/phaser/yarn.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,17 +1176,40 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flappy/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            <state relative-caret-position="149">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bird.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bird.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flappy/bird.png">
           <provider selected="true" editor-type-id="images">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flappy/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -109,6 +1239,7 @@
       <find>birdFlapPower</find>
       <find>input</find>
       <find>bird.</find>
+      <find>buba</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,9 +1261,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -217,18 +1345,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529151482446</updated>
-      <workItem from="1529151487539" duration="5572000" />
+      <workItem from="1529151487539" duration="6228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5572000" />
+    <option name="totallyTimeSpent" value="6228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19717261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19717261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -306,17 +1433,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flappy/game.js">
+    <entry file="file://$PROJECT_DIR$/flappy/bird.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flappy/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flappy/bird.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/flappy/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
