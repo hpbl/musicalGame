@@ -111,7 +111,12 @@ function getNotesFromPiano(scaleNotes) {
     function isInScale(note, scaleNotes) {
         for (var i in scaleNotes) {
             if (note.includes(scaleNotes[i])) {
-                return true;
+                if (note[1] == 'b' && scaleNotes[i].length > 1) {
+                    return true;   
+                }
+                else if (note[1] != 'b' && scaleNotes[i].length == 1) {
+                    return true;
+                }
             }
         }
         return false;

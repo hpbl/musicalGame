@@ -55,9 +55,9 @@ let startGame = function() {
             keyA = keyboard.addKey(Phaser.Keyboard.A);
             keyS = keyboard.addKey(Phaser.Keyboard.S);
             keyD = keyboard.addKey(Phaser.Keyboard.D);
-            keyA.onDown.add(playSound, this);
-            keyS.onDown.add(playSound, this);
-            keyD.onDown.add(playSound, this);
+            keyA.onDown.add(function() { playSound(0); }, this);
+            keyS.onDown.add(function() { playSound(2); }, this);
+            keyD.onDown.add(function() { playSound(4); }, this);
 
             keyQ = keyboard.addKey(Phaser.Keyboard.Q);
             keyE = keyboard.addKey(Phaser.Keyboard.E);
@@ -90,16 +90,20 @@ let startGame = function() {
 	}
 
 	function updateScaleText() {
-		scaleText.text = "Scale: " + currScale + '[' + fullPianoWeak[currScale] + ']';
+		scaleText.text = "Scale: " + currScale;
 	}
      
 	function move() {
 		bird.body.position.y = mouse.position.y
 	}
 
-	function playSound() {
+	function playSound(toneDelta=0) {
 		//calculo da nota correspondente
 		let noteNumber = Math.floor((game.height - bird.body.position.y) / (game.height / numberOfIntervals))
+		noteNumber += toneDelta
+		noteNumber = Math.max(noteNumber, 0)
+		noteNumber = Math.min(noteNumber, numberOfIntervals)
+
 		playNote(noteNumber, 'piano-weak', currScale);
 	}
 
