@@ -1,25 +1,27 @@
-let startGame = function() {	
-	var game = new Phaser.Game(320, 480, Phaser.CANVAS);
+let startGame = function() {
+	var width = 640 * 1.5;
+	var height = 480 * 1.5;
+	var game = new Phaser.Game(width, height, Phaser.CANVAS);
+
+	var intervals = 48 // 87
+
 	var bird;
-     // bird gravity, will make bird fall if you don't flap
-	var birdGravity = 400;
      // horizontal bird speed
-	var birdSpeed = 125;
-     // flap thrust
-	var birdFlapPower = 150;
+	var birdSpeed = 100;
      // milliseconds between the creation of two pipes
-	var pipeInterval = 2000;
+	var pipeInterval = 5000;
      // hole between pipes, in puxels
-	var pipeHole = 120;
+	var pipeHole = 10;
 	var pipeGroup;
 	var score=0;
 	var scoreText;
-     var topScore;
-     var key1;
+    var topScore;
+
+    var mousePlayed = false;
      
-     var play = function(game){}
+    var play = function(game){}
      
-     play.prototype = {
+    play.prototype = {
 		preload:function(){
 			game.load.image("bird", "resources/bird.png");
 			game.load.image("pipe", "resources/pipe.png");
@@ -38,9 +40,7 @@ let startGame = function() {
 			bird = game.add.sprite(80,240,"bird");
 			bird.anchor.set(0.5);
 			game.physics.arcade.enable(bird);
-			bird.body.gravity.y = birdGravity;
-            key1 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-            key1.onDown.add(flap, this);
+            mouse = game.input.mousePointer;
 			game.time.events.loop(pipeInterval, addPipe); 
 			addPipe();
 		},
@@ -48,35 +48,42 @@ let startGame = function() {
 			game.physics.arcade.collide(bird, pipeGroup, die);
 			if(bird.y>game.height){
 				die();
-			}	
+			}
+			move();
+			if(mouse.isDown && !mousePlayed){
+				mousePlayed = true;
+            	game.input.mouse.requestPointerLock();
+				playSound();
+			}
+			else if (!mouse.isDown){
+				mousePlayed = false;
+			}
 		}
 	};
      
-     game.state.add("Play",play);
-     game.state.start("Play");
+    game.state.add("Play",play);
+    game.state.start("Play");
      
-     function updateScore(){
+    function updateScore(){
 		scoreText.text = "Score: "+score+"\nBest: "+topScore;	
 	}
      
-	function flap(){
-		bird.body.velocity.y = -birdFlapPower;
-		//posicao y do jogador
-		console.log(bird.body.position.y);
-		//altura do jogo
-		console.log(game.height);
+	function move(){
+		bird.body.position.y = mouse.position.y
+	}
+
+	function playSound(){
 		//calculo da nota correspondente
-		let noteNumber = Math.floor((game.height - bird.body.position.y)/(game.height/8))
-		console.log(noteNumber);
-		playNote(noteNumber, 'guitar-electric');
+		let noteNumber = Math.floor((game.height - bird.body.position.y)/(game.height/intervals))
+		playNote(noteNumber, 'piano-weak');
 	}
 	
 	function addPipe(){
-		var pipeHolePosition = game.rnd.between(50,430-pipeHole);
-		var upperPipe = new Pipe(game,320,pipeHolePosition-480,-birdSpeed);
+		var pipeHolePosition = game.rnd.between(50,(height-50)-pipeHole);
+		var upperPipe = new Pipe(game,width,pipeHolePosition-height,-birdSpeed);
 		game.add.existing(upperPipe);
 		pipeGroup.add(upperPipe);
-		var lowerPipe = new Pipe(game,320,pipeHolePosition+pipeHole,-birdSpeed);
+		var lowerPipe = new Pipe(game,width,pipeHolePosition+pipeHole,-birdSpeed);
 		game.add.existing(lowerPipe);
 		pipeGroup.add(lowerPipe);
 	}
