@@ -24,28 +24,28 @@ let startGame = function() {
     var play = function(game) {}
      
     play.prototype = {
-		preload:function() {
+		preload: function() {
 			game.load.image("bird", "resources/bird.png");
 			game.load.image("pipe", "resources/pipe.png");
 		},
-		create:function(){
-			pipeGroup = game.add.group();
+		create: function() {
 			score = 0;
 			topScore = localStorage.getItem("topFlappyScore")==null?0:localStorage.getItem("topFlappyScore");
-			scoreText = game.add.text(10, 10, "-", {
-				font: "bold 16px Arial"
-			});
-			scaleText = game.add.text(10, 60, "-", {
-				font: "bold 16px Arial"
-			});
+			scoreText = game.add.text(10, 10, "-", { font: "bold 16px Arial" });
+			scaleText = game.add.text(10, 60, "-", { font: "bold 16px Arial" });
+			noteText = game.add.text(10, 85, "-", { font: "bold 16px Arial" });
 			updateScoreText();
 			updateScaleText();
+
 			game.stage.backgroundColor = "#87CEEB";
 			game.stage.disableVisibilityChange = true;
 			game.physics.startSystem(Phaser.Physics.ARCADE);
+
 			bird = game.add.sprite(80, 240, "bird");
 			bird.anchor.set(0.5);
 			game.physics.arcade.enable(bird);
+
+			pipeGroup = game.add.group();
 			game.time.events.loop(pipeInterval, addPipe); 
 			addPipe();
 
@@ -65,20 +65,13 @@ let startGame = function() {
             keyE.onDown.add(nextScale, this);
 
 		},
-		update:function() {
+		update: function() {
 			game.physics.arcade.collide(bird, pipeGroup, die);
-			if(bird.y > game.height) {
-				die();
-			}
+			// if (bird.y > game.height) {
+			// 	die();
+			// }
 			move();
-			// if(mouse.isDown && !mousePlayed) {
-			// 	mousePlayed = true;
-			//  game.input.mouse.requestPointerLock();
-			// 	playSound();
-			// }
-			// else if (!mouse.isDown){
-			// 	mousePlayed = false;
-			// }
+			updateNoteText();
 		}
 	};
      
@@ -92,17 +85,27 @@ let startGame = function() {
 	function updateScaleText() {
 		scaleText.text = "Scale: " + currScale;
 	}
+
+	function updateNoteText() {
+		let noteNumber = getNoteNumber();
+		let note = fullPianoWeak[currScale][noteNumber];
+
+		noteText.text = "Note: " + note;
+	}	
      
 	function move() {
 		bird.body.position.y = mouse.position.y
 	}
 
+	function getNoteNumber() {
+		return Math.floor((game.height - bird.body.position.y) / (game.height / numberOfIntervals));
+	}
+
 	function playSound(toneDelta=0) {
-		//calculo da nota correspondente
-		let noteNumber = Math.floor((game.height - bird.body.position.y) / (game.height / numberOfIntervals))
-		noteNumber += toneDelta
-		noteNumber = Math.max(noteNumber, 0)
-		noteNumber = Math.min(noteNumber, numberOfIntervals)
+		let noteNumber = getNoteNumber();
+		noteNumber += toneDelta;
+		noteNumber = Math.max(noteNumber, 0);
+		noteNumber = Math.min(noteNumber, numberOfIntervals-1);
 
 		playNote(noteNumber, 'piano-weak', currScale);
 	}
