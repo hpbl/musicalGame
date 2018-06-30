@@ -20,6 +20,8 @@ let startGame = function() {
     var topScore;
 
     var mousePlayed = false;
+
+    var music;
      
     var play = function(game) {}
      
@@ -27,6 +29,7 @@ let startGame = function() {
 		preload: function() {
 			game.load.image("bird", "resources/bird.png");
 			game.load.image("pipe", "resources/pipe.png");
+			game.load.audio("backgroundMusic", "resources/background_jazz_am7.mp3");
 		},
 		create: function() {
 			score = 0;
@@ -55,14 +58,20 @@ let startGame = function() {
             keyA = keyboard.addKey(Phaser.Keyboard.A);
             keyS = keyboard.addKey(Phaser.Keyboard.S);
             keyD = keyboard.addKey(Phaser.Keyboard.D);
+            keyF = keyboard.addKey(Phaser.Keyboard.F);
             keyA.onDown.add(function() { playSound(0); }, this);
             keyS.onDown.add(function() { playSound(2); }, this);
             keyD.onDown.add(function() { playSound(4); }, this);
+            keyF.onDown.add(function() { playSound(6); }, this);
 
             keyQ = keyboard.addKey(Phaser.Keyboard.Q);
             keyE = keyboard.addKey(Phaser.Keyboard.E);
             keyQ.onDown.add(prevScale, this);
             keyE.onDown.add(nextScale, this);
+
+            music = game.add.audio('backgroundMusic');
+            music.volume = 0.1;
+            music.play();
 
 		},
 		update: function() {
@@ -143,7 +152,8 @@ let startGame = function() {
 	}
 	
 	function die() {
-		localStorage.setItem("topFlappyScore", Math.max(score,topScore));	
+		localStorage.setItem("topFlappyScore", Math.max(score,topScore));
+		music.stop();
 		game.state.start("Play");	
 	}
 	
