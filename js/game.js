@@ -178,3 +178,5 @@ let startGame = function() {
 		}
 	};	
 }
+
+startGame();

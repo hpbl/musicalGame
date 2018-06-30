@@ -26,10 +26,7 @@ Tone.Buffer.on('load', function() {
 
     current = samples[instruments[2]];
     current.chain(new Tone.Volume(20), Tone.Master);
-
-    startGame()
 })
-
 
 // show error message on loading error //
 Tone.Buffer.on('error', function() {
@@ -158,4 +155,3 @@ function playNote(height, instrument, scale='CMajor') {
     // current.triggerAttack(note);
     current.triggerAttackRelease(note, "1")
 }
-
