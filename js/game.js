@@ -22,7 +22,7 @@ let startGame = function() {
     var mousePlayed = false;
 
     var music;
-     
+    
     var play = function(game) {}
      
     play.prototype = {
