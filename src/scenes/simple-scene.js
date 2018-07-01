@@ -2,15 +2,11 @@ import Phaser from 'phaser'
 
 import { Config } from '../config'
 import { Sound } from '../sound'
+import { TonicBullet, ThirdBullet, FifthBullet, SeventhBullet } from '../models/bullet'
+import { BulletType } from '../models/bulletType'
 
 export class SimpleScene extends Phaser.Scene {
   preload () {
-    // screen texts
-    // this.scaleText, this.noteText
-
-    // player object
-    // this.player
-
     // piano sound variables
     this.notePlayer = new Sound()
     this.currScaleIndex = 0
@@ -20,6 +16,7 @@ export class SimpleScene extends Phaser.Scene {
 
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/buba.png')
+    this.load.image('bullet', 'assets/bullet.png')
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
@@ -43,20 +40,27 @@ export class SimpleScene extends Phaser.Scene {
     this.noteText = this.add.text(10, 85, '-', { font: 'bold 16px Arial' })
 
     // start player object
-    this.player = this.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
-    // this.physics.arcade.enable(player)
+    this.player = this.physics.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
 
-    // start enemies object looping
-    this.enemies = this.add.group()
-    // this.time.events.loop(400, this.addEnemy)
+    // start player bullets
+    this.bullets = {
+      [BulletType.TONIC]: this.add.group({ classType: TonicBullet, runChildUpdate: true }),
+      [BulletType.THIRD]: this.add.group({ classType: ThirdBullet, runChildUpdate: true }),
+      [BulletType.FIFTH]: this.add.group({ classType: FifthBullet, runChildUpdate: true }),
+      [BulletType.SEVENTH]: this.add.group({ classType: SeventhBullet, runChildUpdate: true })
+    }
+    // this.tonicBullets = this.add.group({ classType: TonicBullet, runChildUpdate: true })
+    // this.thirdBullets = this.add.group({ classType: ThirdBullet, runChildUpdate: true })
+    // this.fifthBullets = this.add.group({ classType: FifthBullet, runChildUpdate: true })
+    // this.seventhBullets = this.add.group({ classType: SeventhBullet, runChildUpdate: true })
 
     // start keyboard listeners
-    this.keyboard.on('keydown_A', e => { this.playPianoNote(0) })
-    this.keyboard.on('keydown_S', e => { this.playPianoNote(2) })
-    this.keyboard.on('keydown_D', e => { this.playPianoNote(4) })
-    this.keyboard.on('keydown_F', e => { this.playPianoNote(6) })
-    this.keyboard.on('keydown_Q', e => { this.selectPrevScale() })
-    this.keyboard.on('keydown_E', e => { this.selectNextScale() })
+    this.keyboard.on('keydown_A', e => { this.shootBullet(BulletType.TONIC) })
+    this.keyboard.on('keydown_S', e => { this.shootBullet(BulletType.THIRD) })
+    this.keyboard.on('keydown_D', e => { this.shootBullet(BulletType.FIFTH) })
+    this.keyboard.on('keydown_F', e => { this.shootBullet(BulletType.SEVENTH) })
+    this.keyboard.on('keydown_Q', e => { this.changeScale('prev') })
+    this.keyboard.on('keydown_E', e => { this.changeScale('next') })
   }
 
   update () {
@@ -81,6 +85,18 @@ export class SimpleScene extends Phaser.Scene {
     this.currNoteIndex = Math.floor((Config.height - this.player.y) / (Config.height / this.numberOfIntervals))
   }
 
+  shootBullet (bulletType) {
+    // add a new bullet
+    let bullet = this.bullets[bulletType].get()
+
+    if (bullet) {
+      bullet.fire()
+    }
+
+    // play sound when the player shoots
+    this.playPianoNote(bulletType)
+  }
+
   playPianoNote (increment) {
     // calculate note to be played, accordingly to the given increment (tonic, third, fifth or seventh)
     let noteToBePlayed = this.currNoteIndex
@@ -95,15 +111,15 @@ export class SimpleScene extends Phaser.Scene {
     this.notePlayer.playNote(noteToBePlayed, 'piano-weak', this.currScale)
   }
 
-  selectPrevScale () {
+  changeScale (direction) {
+    if (direction === 'prev') {
 
+    } else if (direction === 'next') {
+
+    }
   }
 
   selectNextScale () {
-
-  }
-
-  addEnemy () {
 
   }
 }

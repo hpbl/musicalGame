@@ -6,7 +6,7 @@ import { Config } from './config'
 const gameConfig = {
   width: Config.width,
   height: Config.height,
-  // physics: Config.physics,
+  physics: Config.physics,
   scene: SimpleScene
 }
 

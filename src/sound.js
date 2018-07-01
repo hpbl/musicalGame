@@ -21,7 +21,6 @@ export class Sound {
       // loop through instruments and set release, connect to master output
       for (var property in this.samples) {
         if (this.samples.hasOwnProperty(property)) {
-          console.log(this.samples[property])
           this.samples[property].release = 0.5
           this.samples[property].toMaster()
         }
@@ -133,7 +132,7 @@ export class Sound {
         note = this.fullPianoWeak[scale][height]
         break
     }
-    console.log(note)
+    // console.log(note)
     // current.triggerAttack(note)
     this.current.triggerAttackRelease(note, '1')
   }
