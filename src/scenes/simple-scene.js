@@ -4,6 +4,7 @@ import { Config } from '../config'
 import { Sound } from '../sound'
 import { TonicBullet, ThirdBullet, FifthBullet, SeventhBullet } from '../models/bullet'
 import { BulletType } from '../models/bulletType'
+import { Enemy } from '../models/enemy'
 
 export class SimpleScene extends Phaser.Scene {
   preload () {
@@ -17,13 +18,12 @@ export class SimpleScene extends Phaser.Scene {
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/buba.png')
     this.load.image('bullet', 'assets/bullet.png')
+    this.load.image('enemy', 'assets/buba.png')
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
 
   create () {
-    // start physics
-
     // start keyboard and mouse input
     this.mouse = this.input.mousePointer
     this.keyboard = this.input.keyboard
@@ -44,15 +44,27 @@ export class SimpleScene extends Phaser.Scene {
 
     // start player bullets
     this.bullets = {
-      [BulletType.TONIC]: this.add.group({ classType: TonicBullet, runChildUpdate: true }),
-      [BulletType.THIRD]: this.add.group({ classType: ThirdBullet, runChildUpdate: true }),
-      [BulletType.FIFTH]: this.add.group({ classType: FifthBullet, runChildUpdate: true }),
-      [BulletType.SEVENTH]: this.add.group({ classType: SeventhBullet, runChildUpdate: true })
+      [BulletType.TONIC]: this.physics.add.group({ classType: TonicBullet, runChildUpdate: true }),
+      [BulletType.THIRD]: this.physics.add.group({ classType: ThirdBullet, runChildUpdate: true }),
+      [BulletType.FIFTH]: this.physics.add.group({ classType: FifthBullet, runChildUpdate: true }),
+      [BulletType.SEVENTH]: this.physics.add.group({ classType: SeventhBullet, runChildUpdate: true })
     }
-    // this.tonicBullets = this.add.group({ classType: TonicBullet, runChildUpdate: true })
-    // this.thirdBullets = this.add.group({ classType: ThirdBullet, runChildUpdate: true })
-    // this.fifthBullets = this.add.group({ classType: FifthBullet, runChildUpdate: true })
-    // this.seventhBullets = this.add.group({ classType: SeventhBullet, runChildUpdate: true })
+
+    this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true})
+
+    // timer para spawn dos inimigos
+    this.time.addEvent({
+      delay: 2000,
+      callback: this.spawnEnemy,
+      callbackScope: this,
+      loop: true
+    })
+    // tratamento de colisao dentre os tiros e inimigos
+    this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.hitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.hitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
+    // this.physics.add.overlap(this.bullets, this.letters, this.colisao, null, this)
 
     // start keyboard listeners
     this.keyboard.on('keydown_A', e => { this.shootBullet(BulletType.TONIC) })
@@ -95,6 +107,35 @@ export class SimpleScene extends Phaser.Scene {
 
     // play sound when the player shoots
     this.playPianoNote(bulletType)
+  }
+
+  spawnEnemy () {
+    this.enemies.get().spawn()
+  }
+
+  hitEnemy (b, e) {
+    // Animacao de destruicao
+    switch (b.bulletType) {
+      case (BulletType.TONIC): {
+        // animacao tonic
+        break
+      }
+      case (BulletType.THIRD): {
+        // animacao third
+        break
+      }
+      case (BulletType.FIFTH): {
+        // animacao fifth
+        break
+      }
+      case (BulletType.SEVENTH): {
+        // animacao seventh
+        break
+      }
+    }
+    // destroi objetos
+    b.destroy()
+    e.destroy()
   }
 
   playPianoNote (increment) {
