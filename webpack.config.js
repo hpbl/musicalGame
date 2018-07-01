@@ -50,5 +50,7 @@ module.exports = {
       name: 'production-dependencies',
       filename: 'production-dependencies.bundle.js'
     }),
-  ]
+  ],
+
+  devtool: 'inline-source-map'
 }
