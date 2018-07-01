@@ -1,0 +1,23 @@
+{
+  "name": "musicalInvaders",
+  "version": "1.0.0",
+  "description": "A musical game",
+  "repository": "https://github.com/hpbl/musicalGame.git",
+  "author": "Hilton Pintor <hiltonpintor@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "standard": "^11.0.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.0.0"
+  },
+  "dependencies": {
+    "nprogress": "^0.2.0",
+    "phaser": "^3.0.0",
+    "tone": "^0.12.80"
+  }
+}
