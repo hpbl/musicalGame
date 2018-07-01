@@ -1,6 +1,7 @@
 # Instruções para rodar o projeto
-### Instalar o yarn
-* Através do link: https://yarnpkg.com/en/docs/install
+### Precisa ter instalados o yarn e nodejs
+* yarn: https://yarnpkg.com/en/docs/install
+* nodejs: https://nodejs.org/en/download/
 ### Executar os comandos abaixo
 * git clone repo
 * git checkout setupEnviroment
