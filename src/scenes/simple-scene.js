@@ -7,6 +7,10 @@ import { BulletType } from '../models/bulletType'
 import { Enemy } from '../models/enemy'
 
 export class SimpleScene extends Phaser.Scene {
+  constructor () {
+    super({ key: 'game' })
+  }
+  
   setupLoading () {
     // Progress bar
     var progressBar = this.add.graphics()
