@@ -7,3 +7,4 @@
 * git checkout setupEnviroment
 * yarn
 * yarn run webpack-dev-server
+* o projeto estará rodando no endereço: localhost:8080
