@@ -1,6 +1,6 @@
 /**
 * @fileoverview A sample library and quick-loader for tone.js
-* 
+*
 * @author N.P. Brosowsky (nbrosowsky@gmail.com)
 * https://github.com/nbrosowsky/tonejs-instruments
 */
