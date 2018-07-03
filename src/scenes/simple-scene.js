@@ -100,6 +100,7 @@ export class SimpleScene extends Phaser.Scene {
       [BulletType.SEVENTH]: this.physics.add.group({ classType: SeventhBullet, runChildUpdate: true })
     }
 
+    // start enemies
     this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true})
 
     // timer para spawn dos inimigos
