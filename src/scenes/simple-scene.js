@@ -71,6 +71,10 @@ export class SimpleScene extends Phaser.Scene {
     this.load.image('bullet', 'assets/bullet.png')
     this.load.image('enemy', 'assets/buba.png')
 
+    for (const t in BulletType) {
+      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 128, frameHeight: 128 })
+    }
+
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
 
@@ -101,8 +105,25 @@ export class SimpleScene extends Phaser.Scene {
       [BulletType.SEVENTH]: this.physics.add.group({ classType: SeventhBullet, runChildUpdate: true })
     }
 
+    // start enemies
     this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true})
 
+    // add animations for each of the bullet types when colliding with enemies
+    this.enemyDeathAnimations = {}
+    for (const t in BulletType) {
+      this.anims.create({
+        key: 'enemyDeath' + BulletType[t],
+        frames: this.anims.generateFrameNumbers('enemyDeath_' + t, {
+          start: 0,
+          end: 15
+        }),
+        frameRate: 16,
+        repeat: 0,
+        hideOnComplete: true
+      })
+      this.enemyDeathAnimations[BulletType[t]] = this.add.group({ defaultKey: 'enemyDeath' + BulletType[t] })
+    }
+    
     // timer para spawn dos inimigos
     this.time.addEvent({
       delay: 2000,
@@ -110,12 +131,12 @@ export class SimpleScene extends Phaser.Scene {
       callbackScope: this,
       loop: true
     })
+    
     // tratamento de colisao dentre os tiros e inimigos
     this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.hitEnemy(b, e) })
     this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.hitEnemy(b, e) })
     this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
     this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    // this.physics.add.overlap(this.bullets, this.letters, this.colisao, null, this)
 
     // start keyboard listeners
     this.keyboard.on('keydown_A', e => { this.shootBullet(BulletType.TONIC) })
@@ -165,25 +186,14 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   hitEnemy (b, e) {
-    // Animacao de destruicao
-    switch (b.bulletType) {
-      case (BulletType.TONIC): {
-        // animacao tonic
-        break
-      }
-      case (BulletType.THIRD): {
-        // animacao third
-        break
-      }
-      case (BulletType.FIFTH): {
-        // animacao fifth
-        break
-      }
-      case (BulletType.SEVENTH): {
-        // animacao seventh
-        break
-      }
-    }
+    // trigger enemy death animation, according to the type of bullet used
+    console.log('hitEnemy')
+    let enemyDeathAnimation = this.enemyDeathAnimations[b.bulletType].get().setActive(true)
+    enemyDeathAnimation.setOrigin(0.5, 0.5);
+    enemyDeathAnimation.x = e.x;
+    enemyDeathAnimation.y = e.y;
+    enemyDeathAnimation.play('enemyDeath' + b.bulletType);
+
     // destroi objetos
     b.destroy()
     e.destroy()
@@ -199,7 +209,6 @@ export class SimpleScene extends Phaser.Scene {
     noteToBePlayed = Math.min(noteToBePlayed, this.numberOfIntervals - 1)
 
     // play the piano note
-    // notePlayer.playNote
     this.notePlayer.playNote(noteToBePlayed, 'piano-weak', this.currScale)
   }
 

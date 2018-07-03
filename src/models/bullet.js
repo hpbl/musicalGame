@@ -26,6 +26,7 @@ export class Bullet extends Phaser.GameObjects.Sprite {
     if (this.x < 0) {
       this.setActive(false)
       this.setVisible(false)
+      this.destroy()
     }
   }
 }
