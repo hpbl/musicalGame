@@ -5,10 +5,11 @@ import { Sound } from '../sound/sound'
 import { TonicBullet, ThirdBullet, FifthBullet, SeventhBullet } from '../models/bullet'
 import { BulletType } from '../models/bulletType'
 import { Enemy } from '../models/enemy'
+import { Planet } from '../models/planet'
 
 export class SimpleScene extends Phaser.Scene {
 
-  setupLoading() {
+  setupLoading () {
     // Progress bar
     var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
@@ -70,6 +71,7 @@ export class SimpleScene extends Phaser.Scene {
     this.load.image('player', 'assets/buba.png')
     this.load.image('bullet', 'assets/bullet.png')
     this.load.image('enemy', 'assets/buba.png')
+    this.load.image('planet', 'assets/planet.png')
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
@@ -92,6 +94,9 @@ export class SimpleScene extends Phaser.Scene {
 
     // start player object
     this.player = this.physics.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
+
+    // start planet object
+    this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
 
     // start player bullets
     this.bullets = {
