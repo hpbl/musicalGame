@@ -64,12 +64,11 @@ export class SimpleScene extends Phaser.Scene {
     this.currScaleIndex = 0
     this.currScale = this.notePlayer.scales[this.currScaleIndex]
     this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length
-    // this.currNoteIndex
 
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/buba.png')
     this.load.image('bullet', 'assets/bullet.png')
-    this.load.image('enemy', 'assets/buba.png')
+    this.load.image('enemy', 'assets/invaders.001.png')
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
@@ -87,8 +86,8 @@ export class SimpleScene extends Phaser.Scene {
     this.sound.play('backgroundMusic')
 
     // start screen texts
-    this.scaleText = this.add.text(10, 60, '-', { font: 'bold 16px Arial' })
-    this.noteText = this.add.text(10, 85, '-', { font: 'bold 16px Arial' })
+    this.scaleText = this.add.text(10, 10, '-', { font: 'bold 16px Arial' })
+    this.noteText = this.add.text(10, 35, '-', { font: 'bold 16px Arial' })
 
     // start player object
     this.player = this.physics.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
@@ -101,6 +100,7 @@ export class SimpleScene extends Phaser.Scene {
       [BulletType.SEVENTH]: this.physics.add.group({ classType: SeventhBullet, runChildUpdate: true })
     }
 
+    // start enemies
     this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true})
 
     // timer para spawn dos inimigos
@@ -134,7 +134,7 @@ export class SimpleScene extends Phaser.Scene {
 
   updateScreenTexts () {
     this.scaleText.setText('Scale: ' + this.currScale)
-    this.noteText.setText('Scale: ' + this.currScale)
+    this.noteText.setText('Note: ' + this.currNote)
   }
 
   updatePlayerPosition () {
@@ -146,6 +146,7 @@ export class SimpleScene extends Phaser.Scene {
   updateCurrentNoteIndex () {
     // update the current piano note, accordingly to player's position
     this.currNoteIndex = Math.floor((Config.height - this.player.y) / (Config.height / this.numberOfIntervals))
+    this.currNote = this.notePlayer.fullPianoWeak[this.currScale][this.currNoteIndex]
   }
 
   shootBullet (bulletType) {
@@ -205,10 +206,20 @@ export class SimpleScene extends Phaser.Scene {
 
   changeScale (direction) {
     if (direction === 'prev') {
+      this.currScaleIndex--;
+      if (this.currScaleIndex < 0) {
+        this.currScaleIndex = this.notePlayer.scales.length - 1
+      }
 
     } else if (direction === 'next') {
-
+      this.currScaleIndex++;
+      if (this.currScaleIndex > this.notePlayer.scales.length - 1) {
+        this.currScaleIndex = 0
+      }
     }
+    
+    this.currScale = this.notePlayer.scales[this.currScaleIndex];
+    this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length;
   }
 
   selectNextScale () {
