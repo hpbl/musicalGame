@@ -7,8 +7,7 @@ import { BulletType } from '../models/bulletType'
 import { Enemy } from '../models/enemy'
 
 export class SimpleScene extends Phaser.Scene {
-
-  setupLoading() {
+  setupLoading () {
     // Progress bar
     var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
@@ -66,7 +65,7 @@ export class SimpleScene extends Phaser.Scene {
     this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length
 
     this.load.image('background', 'assets/background.png')
-    this.load.image('player', 'assets/buba.png')
+    this.load.image('player', 'assets/ship.png')
     this.load.image('bullet', 'assets/bullet.png')
     this.load.image('enemy', 'assets/invaders.001.png')
 
