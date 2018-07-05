@@ -128,7 +128,7 @@ export class SimpleScene extends Phaser.Scene {
     
     // timer para spawn dos inimigos
     this.time.addEvent({
-      delay: 2000,
+      delay: 1000,
       callback: this.spawnEnemy,
       callbackScope: this,
       loop: true
