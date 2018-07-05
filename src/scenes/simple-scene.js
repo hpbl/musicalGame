@@ -10,13 +10,13 @@ export class SimpleScene extends Phaser.Scene {
   constructor () {
     super({ key: 'game' })
   }
-  
+
   setupLoading () {
     // Progress bar
     var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
     progressBox.fillStyle(0x222222, 0.8)
-    progressBox.fillRect(240, 270, 320, 50)
+    progressBox.fillRect((Config.width / 2) - (320 / 2), Config.height / 2, 320, 50)
 
     // loading text
     var width = this.cameras.main.width
@@ -35,7 +35,7 @@ export class SimpleScene extends Phaser.Scene {
     // loading percentage
     var percentText = this.make.text({
       x: width / 2,
-      y: height / 2 - 5,
+      y: height / 2 - 20,
       text: '0%',
       style: {
         font: '18px monospace',
@@ -47,7 +47,7 @@ export class SimpleScene extends Phaser.Scene {
     this.load.on('progress', function (value) {
       progressBar.clear()
       progressBar.fillStyle(0xffffff, 1)
-      progressBar.fillRect(250, 280, 300 * value, 30)
+      progressBar.fillRect((Config.width / 2) - (320 / 2) + 10, (Config.height / 2) + 10, 300 * value, 30)
       percentText.setText(parseInt(value * 100) + '%')
     })
 
