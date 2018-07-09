@@ -206,7 +206,9 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   enemyHitPlanet (p, e) {
-    p.enemyHit(e.damage)
+    if (p.enemyHit(e.damage)) {
+      this.scene.start('end')
+    }
     e.destroy()
   }
 

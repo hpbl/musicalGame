@@ -27,7 +27,9 @@ export class Planet extends Phaser.GameObjects.Sprite {
     this.life -= damage
     if (this.life <= 0) {
       // game over
-      console.log('game over')
+      return true
     }
+
+    return false
   }
 }
