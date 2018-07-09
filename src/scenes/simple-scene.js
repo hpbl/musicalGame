@@ -64,12 +64,18 @@ export class SimpleScene extends Phaser.Scene {
 
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/ship.png')
-    this.load.image('bullet', 'assets/bullet.png')
-    this.load.image('planet', 'assets/planet.png')
-    this.load.image('enemy', 'assets/invaders.001.png')
+    this.load.image('bullet_TONIC', 'assets/bullet_TONIC.png')
+    this.load.image('bullet_THIRD', 'assets/bullet_THIRD.png')
+    this.load.image('bullet_FIFTH', 'assets/bullet_FIFTH.png')
+    this.load.image('bullet_SEVENTH', 'assets/bullet_SEVENTH.png')
+    this.load.image('planet', 'assets/planet2.png')
+    this.load.image('enemy_1', 'assets/invaders.001.png')
+    this.load.image('enemy_2', 'assets/invaders.002.png')
+    this.load.image('enemy_3', 'assets/invaders.003.png')
+    this.load.image('enemy_4', 'assets/invaders.004.png')
 
     for (const t in BulletType) {
-      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 128, frameHeight: 128 })
+      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 60, frameHeight: 60 })
     }
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
@@ -128,7 +134,7 @@ export class SimpleScene extends Phaser.Scene {
 
     // timer para spawn dos inimigos
     this.time.addEvent({
-      delay: 2000,
+      delay: 1000,
       callback: this.spawnEnemy,
       callbackScope: this,
       loop: true
