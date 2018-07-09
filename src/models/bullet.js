@@ -6,9 +6,8 @@ import { BulletType, getOffsetFromBulletType } from './bulletType'
 export class Bullet extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
-    Phaser.GameObjects.Image.call(this, game, 0, 0, 'bullet')
-
-    this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
+    this.speed = Phaser.Math.GetSpeed(Config.width, 0.2)
+    this.setScale(0.4)
   }
 
   fire (bulletType) {
@@ -32,6 +31,11 @@ export class Bullet extends Phaser.GameObjects.Sprite {
 }
 
 export class TonicBullet extends Bullet {
+  constructor (game) {
+    super(game)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'bullet_TONIC')
+  }
+
   fire () {
     this.bulletType = BulletType.TONIC
     super.fire(this.bulletType)
@@ -39,6 +43,11 @@ export class TonicBullet extends Bullet {
 }
 
 export class ThirdBullet extends Bullet {
+  constructor (game) {
+    super(game)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'bullet_THIRD')
+  }
+
   fire () {
     this.bulletType = BulletType.THIRD
     super.fire(this.bulletType)
@@ -46,6 +55,11 @@ export class ThirdBullet extends Bullet {
 }
 
 export class FifthBullet extends Bullet {
+  constructor (game) {
+    super(game)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'bullet_FIFTH')
+  }
+
   fire () {
     this.bulletType = BulletType.FIFTH
     super.fire(this.bulletType)
@@ -53,6 +67,11 @@ export class FifthBullet extends Bullet {
 }
 
 export class SeventhBullet extends Bullet {
+  constructor (game) {
+    super(game)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'bullet_SEVENTH')
+  }
+
   fire () {
     this.bulletType = BulletType.SEVENTH
     super.fire(this.bulletType)

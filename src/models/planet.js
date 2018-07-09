@@ -18,7 +18,7 @@ export class Planet extends Phaser.GameObjects.Sprite {
   // }
 
   start () {
-    this.setPosition(Config.width * 0.9, Config.height / 2)
+    this.setPosition(Config.width * 1.15, Config.height / 2)
     this.setActive(true)
     this.setVisible(true)
   }

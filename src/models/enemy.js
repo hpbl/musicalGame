@@ -5,7 +5,8 @@ import { Config } from '../config'
 export class Enemy extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
-    Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy')
+    let randomTexture = Phaser.Math.Between(1, 4)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy_' + randomTexture)
     this.damage = 10
     this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
   }
