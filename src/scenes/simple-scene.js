@@ -213,7 +213,8 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   enemyHitPlanet (p, e) {
-    p.enemyHit(1)
+    p.enemyHit(e.damage)
+    e.destroy()
   }
 
   playPianoNote (increment) {

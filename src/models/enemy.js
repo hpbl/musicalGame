@@ -1,13 +1,12 @@
 import Phaser from 'phaser'
 
 import { Config } from '../config'
-import { Planet } from './planet'
 
 export class Enemy extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
     Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy')
-
+    this.damage = 10
     this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
   }
 
@@ -22,12 +21,5 @@ export class Enemy extends Phaser.GameObjects.Sprite {
 
   update () {
     this.x += this.speed
-    // if (this.x > Planet.positionX) {
-    //   // diminuir life da terra
-    //   console.log(Planet.positionX)
-    //   Planet.enemyHit(10)
-    //   // destruir objeto
-    //   this.destroy()
-    // }
   }
 }
