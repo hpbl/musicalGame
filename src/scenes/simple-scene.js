@@ -13,50 +13,43 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   setupLoading () {
+    let background = this.add.image(Config.width / 2, Config.height / 2, 'loadingBackground')
+
+    let barHeight = 30
+    let barWidth = 320
+    let barX = (Config.width / 2) - (320 / 2)
+    let barY = Config.height / 2
+
     // Progress bar
-    var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
-    progressBox.fillStyle(0x222222, 0.8)
-    progressBox.fillRect((Config.width / 2) - (320 / 2), Config.height / 2, 320, 50)
+    progressBox.fillStyle(0x000000, 1)
+    progressBox.fillRect(barX, barY, barWidth, barHeight)
+
+    var progressBar = this.add.graphics()
 
     // loading text
-    var width = this.cameras.main.width
-    var height = this.cameras.main.height
     var loadingText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 50,
-      text: 'Loading...',
+      x: barX + barWidth / 2,
+      y: barY + barHeight / 2,
+      text: 'Loading',
       style: {
         font: '20px monospace',
-        fill: '#ffffff'
+        fill: '#FEFEFE'
       }
     })
     loadingText.setOrigin(0.5, 0.5)
 
-    // loading percentage
-    var percentText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 20,
-      text: '0%',
-      style: {
-        font: '18px monospace',
-        fill: '#ffffff'
-      }
-    })
-    percentText.setOrigin(0.5, 0.5)
-
     this.load.on('progress', function (value) {
       progressBar.clear()
-      progressBar.fillStyle(0xffffff, 1)
-      progressBar.fillRect((Config.width / 2) - (320 / 2) + 10, (Config.height / 2) + 10, 300 * value, 30)
-      percentText.setText(parseInt(value * 100) + '%')
+      progressBar.fillStyle(0x49E1D1, 1)
+      progressBar.fillRect(barX, barY, barWidth * value, barHeight)
     })
 
     this.load.on('complete', function () {
       progressBar.destroy()
       progressBox.destroy()
       loadingText.destroy()
-      percentText.destroy()
+      background.destroy()
     })
   }
 

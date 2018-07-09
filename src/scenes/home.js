@@ -10,6 +10,7 @@ export class HomeScene extends Phaser.Scene {
   preload () {
     this.load.image('homeBackground', 'assets/homeBackground.png')
     this.load.image('button', 'assets/playButton.png')
+    this.load.image('loadingBackground', 'assets/loadingBackground.png')
   }
 
   create () {
