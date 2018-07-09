@@ -6,7 +6,7 @@ export class Enemy extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
     Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy')
-
+    this.damage = 10
     this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
   }
 
@@ -21,10 +21,5 @@ export class Enemy extends Phaser.GameObjects.Sprite {
 
   update () {
     this.x += this.speed
-    if (this.x > (this.scene.player.x)) {
-      // diminuir life da terra
-      // destruir objeto
-      this.destroy()
-    }
   }
 }

@@ -5,6 +5,7 @@ import { Sound } from '../sound/sound'
 import { TonicBullet, ThirdBullet, FifthBullet, SeventhBullet } from '../models/bullet'
 import { BulletType } from '../models/bulletType'
 import { Enemy } from '../models/enemy'
+import { Planet } from '../models/planet'
 
 export class SimpleScene extends Phaser.Scene {
   constructor () {
@@ -71,6 +72,7 @@ export class SimpleScene extends Phaser.Scene {
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/ship.png')
     this.load.image('bullet', 'assets/bullet.png')
+    this.load.image('planet', 'assets/planet.png')
     this.load.image('enemy', 'assets/invaders.001.png')
 
     for (const t in BulletType) {
@@ -99,6 +101,11 @@ export class SimpleScene extends Phaser.Scene {
     // start player object
     this.player = this.physics.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
 
+    // start planet object
+    this.planet = this.physics.add.group({ classType: Planet, runChildUpdate: false })
+    this.planet.get().start()
+    // this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
+
     // start player bullets
     this.bullets = {
       [BulletType.TONIC]: this.physics.add.group({ classType: TonicBullet, runChildUpdate: true }),
@@ -125,7 +132,7 @@ export class SimpleScene extends Phaser.Scene {
       })
       this.enemyDeathAnimations[BulletType[t]] = this.add.group({ defaultKey: 'enemyDeath' + BulletType[t] })
     }
-    
+
     // timer para spawn dos inimigos
     this.time.addEvent({
       delay: 2000,
@@ -133,12 +140,15 @@ export class SimpleScene extends Phaser.Scene {
       callbackScope: this,
       loop: true
     })
-    
+
     // tratamento de colisao dentre os tiros e inimigos
-    this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+
+    // tratamento de colisao entre inimigos e planeta
+    this.physics.add.collider(this.planet, this.enemies, (p, e) => { this.enemyHitPlanet(p, e) })
 
     // start keyboard listeners
     this.keyboard.on('keydown_A', e => { this.shootBullet(BulletType.TONIC) })
@@ -188,17 +198,22 @@ export class SimpleScene extends Phaser.Scene {
     this.enemies.get().spawn()
   }
 
-  hitEnemy (b, e) {
+  bulletHitEnemy (b, e) {
     // trigger enemy death animation, according to the type of bullet used
-    console.log('hitEnemy')
+    console.log('bulletHitEnemy')
     let enemyDeathAnimation = this.enemyDeathAnimations[b.bulletType].get().setActive(true)
-    enemyDeathAnimation.setOrigin(0.5, 0.5);
-    enemyDeathAnimation.x = e.x;
-    enemyDeathAnimation.y = e.y;
-    enemyDeathAnimation.play('enemyDeath' + b.bulletType);
+    enemyDeathAnimation.setOrigin(0.5, 0.5)
+    enemyDeathAnimation.x = e.x
+    enemyDeathAnimation.y = e.y
+    enemyDeathAnimation.play('enemyDeath' + b.bulletType)
 
     // destroi objetos
     b.destroy()
+    e.destroy()
+  }
+
+  enemyHitPlanet (p, e) {
+    p.enemyHit(e.damage)
     e.destroy()
   }
 
@@ -217,20 +232,19 @@ export class SimpleScene extends Phaser.Scene {
 
   changeScale (direction) {
     if (direction === 'prev') {
-      this.currScaleIndex--;
+      this.currScaleIndex--
       if (this.currScaleIndex < 0) {
         this.currScaleIndex = this.notePlayer.scales.length - 1
       }
-
     } else if (direction === 'next') {
-      this.currScaleIndex++;
+      this.currScaleIndex++
       if (this.currScaleIndex > this.notePlayer.scales.length - 1) {
         this.currScaleIndex = 0
       }
     }
-    
-    this.currScale = this.notePlayer.scales[this.currScaleIndex];
-    this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length;
+
+    this.currScale = this.notePlayer.scales[this.currScaleIndex]
+    this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length
   }
 
   selectNextScale () {

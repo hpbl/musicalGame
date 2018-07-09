@@ -21,7 +21,7 @@ export class Bullet extends Phaser.GameObjects.Sprite {
   }
 
   update () {
-    this.x += (-this.speed)
+    this.x -= this.speed
 
     if (this.x < 0) {
       this.setActive(false)
