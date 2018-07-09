@@ -12,6 +12,8 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   setupLoading () {
+    this.add.image(Config.width / 2, Config.height / 2, 'loadingBackground')
+
     // Progress bar
     var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
