@@ -14,6 +14,7 @@ export class Enemy extends Phaser.GameObjects.Sprite {
   // spawn dos monstros no canto esquerdo e alturas randomicas
   spawn () {
     let randomY = Phaser.Math.Between(0, Config.height)
+    this.setScale(0.2, 0.2)
     this.setPosition(0, randomY)
     this.setActive(true)
     this.setVisible(true)
@@ -21,12 +22,12 @@ export class Enemy extends Phaser.GameObjects.Sprite {
 
   update () {
     this.x += this.speed
-    if (this.x > Planet.positionX) {
-      // diminuir life da terra
-      console.log(Planet.positionX)
-      Planet.enemyHit(10)
-      // destruir objeto
-      this.destroy()
-    }
+    // if (this.x > Planet.positionX) {
+    //   // diminuir life da terra
+    //   console.log(Planet.positionX)
+    //   Planet.enemyHit(10)
+    //   // destruir objeto
+    //   this.destroy()
+    // }
   }
 }

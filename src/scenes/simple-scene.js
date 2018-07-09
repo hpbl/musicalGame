@@ -8,13 +8,16 @@ import { Enemy } from '../models/enemy'
 import { Planet } from '../models/planet'
 
 export class SimpleScene extends Phaser.Scene {
+  constructor () {
+    super({ key: 'game' })
+  }
 
   setupLoading () {
     // Progress bar
     var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
     progressBox.fillStyle(0x222222, 0.8)
-    progressBox.fillRect(240, 270, 320, 50)
+    progressBox.fillRect((Config.width / 2) - (320 / 2), Config.height / 2, 320, 50)
 
     // loading text
     var width = this.cameras.main.width
@@ -33,7 +36,7 @@ export class SimpleScene extends Phaser.Scene {
     // loading percentage
     var percentText = this.make.text({
       x: width / 2,
-      y: height / 2 - 5,
+      y: height / 2 - 20,
       text: '0%',
       style: {
         font: '18px monospace',
@@ -45,7 +48,7 @@ export class SimpleScene extends Phaser.Scene {
     this.load.on('progress', function (value) {
       progressBar.clear()
       progressBar.fillStyle(0xffffff, 1)
-      progressBar.fillRect(250, 280, 300 * value, 30)
+      progressBar.fillRect((Config.width / 2) - (320 / 2) + 10, (Config.height / 2) + 10, 300 * value, 30)
       percentText.setText(parseInt(value * 100) + '%')
     })
 
@@ -65,13 +68,16 @@ export class SimpleScene extends Phaser.Scene {
     this.currScaleIndex = 0
     this.currScale = this.notePlayer.scales[this.currScaleIndex]
     this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length
-    // this.currNoteIndex
 
     this.load.image('background', 'assets/background.png')
-    this.load.image('player', 'assets/buba.png')
+    this.load.image('player', 'assets/ship.png')
     this.load.image('bullet', 'assets/bullet.png')
-    this.load.image('enemy', 'assets/buba.png')
     this.load.image('planet', 'assets/planet.png')
+    this.load.image('enemy', 'assets/invaders.001.png')
+
+    for (const t in BulletType) {
+      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 128, frameHeight: 128 })
+    }
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
   }
@@ -89,14 +95,16 @@ export class SimpleScene extends Phaser.Scene {
     this.sound.play('backgroundMusic')
 
     // start screen texts
-    this.scaleText = this.add.text(10, 60, '-', { font: 'bold 16px Arial' })
-    this.noteText = this.add.text(10, 85, '-', { font: 'bold 16px Arial' })
+    this.scaleText = this.add.text(10, 10, '-', { font: 'bold 16px Arial' })
+    this.noteText = this.add.text(10, 35, '-', { font: 'bold 16px Arial' })
 
     // start player object
     this.player = this.physics.add.sprite(Config.width * 0.8125, Config.height / 2, 'player')
 
     // start planet object
-    this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
+    this.planet = this.physics.add.group({ classType: Planet, runChildUpdate: false })
+    this.planet.get().start()
+    // this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
 
     // start player bullets
     this.bullets = {
@@ -106,7 +114,24 @@ export class SimpleScene extends Phaser.Scene {
       [BulletType.SEVENTH]: this.physics.add.group({ classType: SeventhBullet, runChildUpdate: true })
     }
 
+    // start enemies
     this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true})
+
+    // add animations for each of the bullet types when colliding with enemies
+    this.enemyDeathAnimations = {}
+    for (const t in BulletType) {
+      this.anims.create({
+        key: 'enemyDeath' + BulletType[t],
+        frames: this.anims.generateFrameNumbers('enemyDeath_' + t, {
+          start: 0,
+          end: 15
+        }),
+        frameRate: 16,
+        repeat: 0,
+        hideOnComplete: true
+      })
+      this.enemyDeathAnimations[BulletType[t]] = this.add.group({ defaultKey: 'enemyDeath' + BulletType[t] })
+    }
 
     // timer para spawn dos inimigos
     this.time.addEvent({
@@ -115,12 +140,15 @@ export class SimpleScene extends Phaser.Scene {
       callbackScope: this,
       loop: true
     })
+
     // tratamento de colisao dentre os tiros e inimigos
-    this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.hitEnemy(b, e) })
-    // this.physics.add.overlap(this.bullets, this.letters, this.colisao, null, this)
+    this.physics.add.collider(this.bullets[BulletType.TONIC], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.THIRD], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.FIFTH], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+    this.physics.add.collider(this.bullets[BulletType.SEVENTH], this.enemies, (b, e) => { this.bulletHitEnemy(b, e) })
+
+    // tratamento de colisao entre inimigos e planeta
+    this.physics.add.collider(this.planet, this.enemies, (p, e) => { this.enemyHitPlanet(p, e) })
 
     // start keyboard listeners
     this.keyboard.on('keydown_A', e => { this.shootBullet(BulletType.TONIC) })
@@ -139,7 +167,7 @@ export class SimpleScene extends Phaser.Scene {
 
   updateScreenTexts () {
     this.scaleText.setText('Scale: ' + this.currScale)
-    this.noteText.setText('Scale: ' + this.currScale)
+    this.noteText.setText('Note: ' + this.currNote)
   }
 
   updatePlayerPosition () {
@@ -151,6 +179,7 @@ export class SimpleScene extends Phaser.Scene {
   updateCurrentNoteIndex () {
     // update the current piano note, accordingly to player's position
     this.currNoteIndex = Math.floor((Config.height - this.player.y) / (Config.height / this.numberOfIntervals))
+    this.currNote = this.notePlayer.fullPianoWeak[this.currScale][this.currNoteIndex]
   }
 
   shootBullet (bulletType) {
@@ -169,29 +198,22 @@ export class SimpleScene extends Phaser.Scene {
     this.enemies.get().spawn()
   }
 
-  hitEnemy (b, e) {
-    // Animacao de destruicao
-    switch (b.bulletType) {
-      case (BulletType.TONIC): {
-        // animacao tonic
-        break
-      }
-      case (BulletType.THIRD): {
-        // animacao third
-        break
-      }
-      case (BulletType.FIFTH): {
-        // animacao fifth
-        break
-      }
-      case (BulletType.SEVENTH): {
-        // animacao seventh
-        break
-      }
-    }
+  bulletHitEnemy (b, e) {
+    // trigger enemy death animation, according to the type of bullet used
+    console.log('bulletHitEnemy')
+    let enemyDeathAnimation = this.enemyDeathAnimations[b.bulletType].get().setActive(true)
+    enemyDeathAnimation.setOrigin(0.5, 0.5)
+    enemyDeathAnimation.x = e.x
+    enemyDeathAnimation.y = e.y
+    enemyDeathAnimation.play('enemyDeath' + b.bulletType)
+
     // destroi objetos
     b.destroy()
     e.destroy()
+  }
+
+  enemyHitPlanet (p, e) {
+    p.enemyHit(1)
   }
 
   playPianoNote (increment) {
@@ -204,16 +226,24 @@ export class SimpleScene extends Phaser.Scene {
     noteToBePlayed = Math.min(noteToBePlayed, this.numberOfIntervals - 1)
 
     // play the piano note
-    // notePlayer.playNote
     this.notePlayer.playNote(noteToBePlayed, 'piano-weak', this.currScale)
   }
 
   changeScale (direction) {
     if (direction === 'prev') {
-
+      this.currScaleIndex--
+      if (this.currScaleIndex < 0) {
+        this.currScaleIndex = this.notePlayer.scales.length - 1
+      }
     } else if (direction === 'next') {
-
+      this.currScaleIndex++
+      if (this.currScaleIndex > this.notePlayer.scales.length - 1) {
+        this.currScaleIndex = 0
+      }
     }
+
+    this.currScale = this.notePlayer.scales[this.currScaleIndex]
+    this.numberOfIntervals = this.notePlayer.fullPianoWeak[this.currScale].length
   }
 
   selectNextScale () {
