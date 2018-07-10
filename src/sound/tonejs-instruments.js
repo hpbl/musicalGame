@@ -80,7 +80,6 @@ export let SampleLibrary = {
                 )
             }
 
-            console.log(rt)
             return rt
 
             // if a single instrument name is passed...

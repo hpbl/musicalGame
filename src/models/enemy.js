@@ -5,18 +5,29 @@ import { Config } from '../config'
 export class Enemy extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
-    Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy')
+    let randomTexture = Phaser.Math.Between(1, 4)
+    Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy_' + randomTexture)
     this.damage = 10
     this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
   }
 
   // spawn dos monstros no canto esquerdo e alturas randomicas
-  spawn () {
-    let randomY = Phaser.Math.Between(0, Config.height)
+  spawn (lastYSpawn) {
+    let newYSpawn = Phaser.Math.Between(Math.max(0, lastYSpawn - 50), Math.min(Config.height, lastYSpawn + 50))
+    let outlierYSpawn = Phaser.Math.Between(0, 100)
+    if (outlierYSpawn === 0) {
+      newYSpawn = Math.max(0, lastYSpawn - 200)
+    }
+    if (outlierYSpawn === 1) {
+      newYSpawn = Math.min(Config.height, lastYSpawn + 200)
+    }
+
     this.setScale(0.2, 0.2)
-    this.setPosition(0, randomY)
+    this.setPosition(0, newYSpawn)
     this.setActive(true)
     this.setVisible(true)
+
+    return newYSpawn
   }
 
   update () {

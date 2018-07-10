@@ -13,55 +13,44 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   setupLoading () {
+    let background = this.add.image(Config.width / 2, Config.height / 2, 'loadingBackground')
+
+    let barHeight = 30
+    let barWidth = 320
+    let barX = (Config.width / 2) - (320 / 2)
+    let barY = Config.height / 2
+
     // Progress bar
-    var progressBar = this.add.graphics()
     var progressBox = this.add.graphics()
-    progressBox.fillStyle(0x222222, 0.8)
-    progressBox.fillRect((Config.width / 2) - (320 / 2), Config.height / 2, 320, 50)
+    progressBox.fillStyle(0x000000, 1)
+    progressBox.fillRect(barX, barY, barWidth, barHeight)
+
+    var progressBar = this.add.graphics()
 
     // loading text
-    var width = this.cameras.main.width
-    var height = this.cameras.main.height
     var loadingText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 50,
-      text: 'Loading...',
+      x: barX + barWidth / 2,
+      y: barY + barHeight / 2,
+      text: 'Loading',
       style: {
         font: '20px monospace',
-        fill: '#ffffff'
+        fill: '#FEFEFE'
       }
     })
     loadingText.setOrigin(0.5, 0.5)
 
-    // loading percentage
-    var percentText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 20,
-      text: '0%',
-      style: {
-        font: '18px monospace',
-        fill: '#ffffff'
-      }
-    })
-    percentText.setOrigin(0.5, 0.5)
-
     this.load.on('progress', function (value) {
       progressBar.clear()
-      progressBar.fillStyle(0xffffff, 1)
-      progressBar.fillRect((Config.width / 2) - (320 / 2) + 10, (Config.height / 2) + 10, 300 * value, 30)
-      percentText.setText(parseInt(value * 100) + '%')
+      progressBar.fillStyle(0x49E1D1, 1)
+      progressBar.fillRect(barX, barY, barWidth * value, barHeight)
     })
 
     this.load.on('complete', function () {
       progressBar.destroy()
       progressBox.destroy()
       loadingText.destroy()
-      percentText.destroy()
+      background.destroy()
     })
-  }
-
-  setupPlanetLifeBar () {
-
   }
 
   preload () {
@@ -75,12 +64,19 @@ export class SimpleScene extends Phaser.Scene {
 
     this.load.image('background', 'assets/background.png')
     this.load.image('player', 'assets/ship.png')
-    this.load.image('bullet', 'assets/bullet.png')
-    this.load.image('planet', 'assets/planet.png')
-    this.load.image('enemy', 'assets/invaders.001.png')
+    this.load.image('bullet_TONIC', 'assets/bullet_TONIC.png')
+    this.load.image('bullet_THIRD', 'assets/bullet_THIRD.png')
+    this.load.image('bullet_FIFTH', 'assets/bullet_FIFTH.png')
+    this.load.image('bullet_SEVENTH', 'assets/bullet_SEVENTH.png')
+    this.load.spritesheet('enemyDeath', 'assets/enemyDeath.png', { frameWidth: 128, frameHeight: 128 })
+    this.load.image('planet', 'assets/planet2.png')
+    this.load.image('enemy_1', 'assets/invaders.001.png')
+    this.load.image('enemy_2', 'assets/invaders.002.png')
+    this.load.image('enemy_3', 'assets/invaders.003.png')
+    this.load.image('enemy_4', 'assets/invaders.004.png')
 
     for (const t in BulletType) {
-      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 128, frameHeight: 128 })
+      this.load.spritesheet('enemyDeath_' + t, 'assets/enemyDeath_' + t + '.png', { frameWidth: 60, frameHeight: 60 })
     }
 
     this.load.audio('backgroundMusic', 'assets/background_jazz_am7.mp3')
@@ -95,7 +91,7 @@ export class SimpleScene extends Phaser.Scene {
     this.add.image(Config.width / 2, Config.height / 2, 'background')
 
     // load background music
-    this.sound.volume = 0.2
+    this.sound.volume = 0.1
     this.sound.play('backgroundMusic')
 
     // start screen texts
@@ -141,10 +137,33 @@ export class SimpleScene extends Phaser.Scene {
       this.enemyDeathAnimations[BulletType[t]] = this.add.group({ defaultKey: 'enemyDeath' + BulletType[t] })
     }
 
+    // animation for enemy coliding with planet
+    this.anims.create({
+      key: 'enemyDeath',
+      frames: this.anims.generateFrameNumbers('enemyDeath', {
+        start: 0,
+        end: 15
+      }),
+      frameRate: 16,
+      repeat: 0,
+      hideOnComplete: true
+    })
+    this.enemyDeathAnimations['planet'] = this.add.group({ defaultKey: 'enemyDeath' })
+
+    this.lastYSpawn = Config.height / 2
     // timer para spawn dos inimigos
-    this.time.addEvent({
-      delay: 1000,
+    this.spawnEnemyTimer = this.time.addEvent({
+      delay: 500,
       callback: this.spawnEnemy,
+      callbackScope: this,
+      loop: true
+    })
+
+    // mudar timer com frequência
+    this.increaseDelay = -1
+    this.changeSpawnEnemyTimer = this.time.addEvent({
+      delay: 1000,
+      callback: this.changeSpawnEnemyDelay,
       callbackScope: this,
       loop: true
     })
@@ -216,12 +235,23 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   spawnEnemy () {
-    this.enemies.get().spawn()
+    this.lastYSpawn = this.enemies.get().spawn(this.lastYSpawn)
+  }
+
+  changeSpawnEnemyDelay () {
+    this.spawnEnemyTimer.delay += (this.increaseDelay * 100)
+    if (this.spawnEnemyTimer.delay <= 100) {
+      this.increaseDelay = 1
+    }
+    if (this.spawnEnemyTimer.delay >= 500) {
+      this.increaseDelay = -1
+    }
+
+    this.changeSpawnEnemyTimer.delay = this.spawnEnemyTimer.delay * 2
   }
 
   bulletHitEnemy (b, e) {
     // trigger enemy death animation, according to the type of bullet used
-    console.log('bulletHitEnemy')
     let enemyDeathAnimation = this.enemyDeathAnimations[b.bulletType].get().setActive(true)
     enemyDeathAnimation.setOrigin(0.5, 0.5)
     enemyDeathAnimation.x = e.x
@@ -234,7 +264,16 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   enemyHitPlanet (p, e) {
-    p.enemyHit(e.damage)
+    let enemyDeathAnimation = this.enemyDeathAnimations['planet'].get().setActive(true)
+    enemyDeathAnimation.setOrigin(0.5, 0.5)
+    enemyDeathAnimation.x = e.x
+    enemyDeathAnimation.y = e.y
+    enemyDeathAnimation.play('enemyDeath')
+
+    if (p.enemyHit(e.damage)) {
+      this.sound.pauseAll()
+      this.scene.start('end')
+    }
     e.destroy()
     this.updatePlanetLifeBar(p.actualLife, p.totalLife)
   }
