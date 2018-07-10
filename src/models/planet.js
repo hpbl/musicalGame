@@ -6,7 +6,8 @@ export class Planet extends Phaser.GameObjects.Sprite {
   constructor (game) {
     super(game)
     Phaser.GameObjects.Image.call(this, game, 0, 0, 'planet')
-    this.life = 100
+    this.totalLife = 100
+    this.actualLife = 100
   }
 
   // static get positionX () {
@@ -24,8 +25,8 @@ export class Planet extends Phaser.GameObjects.Sprite {
   }
 
   enemyHit (damage) {
-    this.life -= damage
-    if (this.life <= 0) {
+    this.actualLife -= damage
+    if (this.actualLife <= 0) {
       // game over
       console.log('game over')
     }

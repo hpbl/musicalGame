@@ -60,6 +60,10 @@ export class SimpleScene extends Phaser.Scene {
     })
   }
 
+  setupPlanetLifeBar () {
+
+  }
+
   preload () {
     this.setupLoading()
 
@@ -105,7 +109,11 @@ export class SimpleScene extends Phaser.Scene {
     this.planet = this.physics.add.group({ classType: Planet, runChildUpdate: false })
     this.planet.get().start()
     // this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
-
+    this.planetLifeBar = this.add.graphics({x: 270, y: 20})
+    this.planetLifePercent = this.add.text(500, 20, '-', { font: 'bold 16px Arial', color: '#000' })
+    this.updatePlanetLifeBar(100, 100)
+    this.planetLifeBar.fillStyle(0xF3F3F3, 1)
+    this.planetLifeBar.fillRect(0, 0, 500, 20)
     // start player bullets
     this.bullets = {
       [BulletType.TONIC]: this.physics.add.group({ classType: TonicBullet, runChildUpdate: true }),
@@ -135,7 +143,7 @@ export class SimpleScene extends Phaser.Scene {
 
     // timer para spawn dos inimigos
     this.time.addEvent({
-      delay: 2000,
+      delay: 1000,
       callback: this.spawnEnemy,
       callbackScope: this,
       loop: true
@@ -163,6 +171,19 @@ export class SimpleScene extends Phaser.Scene {
     this.updateScreenTexts()
 
     this.updatePlayerPosition()
+  }
+
+  updatePlanetLifeBar (actualLife, totalLife) {
+    let percent = actualLife / totalLife * 100
+    this.planetLifePercent.setText(percent + '%')
+    this.planetLifeBar.clear()
+    this.planetLifeBar.fillStyle(0xF3F3F3, 1)
+    this.planetLifeBar.fillRect(0, 0, (500 * percent / 100), 20)
+    if (percent <= 50) {
+      this.planetLifePercent.style.color = '#fff'
+    } else {
+      this.planetLifePercent.style.color = '#000'
+    }
   }
 
   updateScreenTexts () {
@@ -215,6 +236,7 @@ export class SimpleScene extends Phaser.Scene {
   enemyHitPlanet (p, e) {
     p.enemyHit(e.damage)
     e.destroy()
+    this.updatePlanetLifeBar(p.actualLife, p.totalLife)
   }
 
   playPianoNote (increment) {
