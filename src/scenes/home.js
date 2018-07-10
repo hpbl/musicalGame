@@ -22,7 +22,7 @@ export class HomeScene extends Phaser.Scene {
 
   setupButton () {
     let buttonX = Config.width / 2
-    let buttonY = Config.height * 0.75
+    let buttonY = Config.height * 0.85
     this.startBtn = this.add.sprite(buttonX, buttonY, 'startButton').setInteractive()
 
     this.startBtn.on('pointerover', (e) => {

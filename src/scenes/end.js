@@ -44,7 +44,7 @@ export class EndScene extends Phaser.Scene {
     var endText = this.make.text({
       x: Config.width / 2,
       y: Config.height * 0.50,
-      text: 'Music is heard on your planet no more',
+      text: 'Music is heard on your planet no more!',
       style: {
         font: '30px monospace',
         fill: '#49E1D1'
