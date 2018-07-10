@@ -108,7 +108,7 @@ export class SimpleScene extends Phaser.Scene {
     this.planetLifeBar = this.add.graphics({x: 270, y: 20})
     this.planetLifePercent = this.add.text(500, 20, '-', { font: 'bold 16px Arial', color: '#000' })
     this.updatePlanetLifeBar(100, 100)
-    this.planetLifeBar.fillStyle(0xF3F3F3, 1)
+    this.planetLifeBar.fillStyle(0x49E1D1, 1)
     this.planetLifeBar.fillRect(0, 0, 500, 20)
     // start player bullets
     this.bullets = {
@@ -196,10 +196,10 @@ export class SimpleScene extends Phaser.Scene {
     let percent = actualLife / totalLife * 100
     this.planetLifePercent.setText(percent + '%')
     this.planetLifeBar.clear()
-    this.planetLifeBar.fillStyle(0xF3F3F3, 1)
+    this.planetLifeBar.fillStyle(0x49E1D1, 1)
     this.planetLifeBar.fillRect(0, 0, (500 * percent / 100), 20)
     if (percent <= 50) {
-      this.planetLifePercent.style.color = '#fff'
+      this.planetLifePercent.style.color = '#49E1D1'
     } else {
       this.planetLifePercent.style.color = '#000'
     }
