@@ -93,7 +93,6 @@ export class SimpleScene extends Phaser.Scene {
     // load background music
     this.sound.volume = 0.1
     this.sound.play('backgroundMusic')
-    console.log(this.sound)
 
     // start screen texts
     this.scaleText = this.add.text(10, 10, '-', { font: 'bold 16px Arial' })
@@ -106,7 +105,11 @@ export class SimpleScene extends Phaser.Scene {
     this.planet = this.physics.add.group({ classType: Planet, runChildUpdate: false })
     this.planet.get().start()
     // this.planet = this.physics.add.sprite(Planet.positionX, Planet.positionY, 'planet')
-
+    this.planetLifeBar = this.add.graphics({x: 270, y: 20})
+    this.planetLifePercent = this.add.text(500, 20, '-', { font: 'bold 16px Arial', color: '#000' })
+    this.updatePlanetLifeBar(100, 100)
+    this.planetLifeBar.fillStyle(0x49E1D1, 1)
+    this.planetLifeBar.fillRect(0, 0, 500, 20)
     // start player bullets
     this.bullets = {
       [BulletType.TONIC]: this.physics.add.group({ classType: TonicBullet, runChildUpdate: true }),
@@ -189,6 +192,19 @@ export class SimpleScene extends Phaser.Scene {
     this.updatePlayerPosition()
   }
 
+  updatePlanetLifeBar (actualLife, totalLife) {
+    let percent = actualLife / totalLife * 100
+    this.planetLifePercent.setText(percent + '%')
+    this.planetLifeBar.clear()
+    this.planetLifeBar.fillStyle(0x49E1D1, 1)
+    this.planetLifeBar.fillRect(0, 0, (500 * percent / 100), 20)
+    if (percent <= 50) {
+      this.planetLifePercent.style.color = '#49E1D1'
+    } else {
+      this.planetLifePercent.style.color = '#000'
+    }
+  }
+
   updateScreenTexts () {
     this.scaleText.setText('Scale: ' + this.currScale)
     this.noteText.setText('Note: ' + this.currNote)
@@ -259,6 +275,7 @@ export class SimpleScene extends Phaser.Scene {
       this.scene.start('end')
     }
     e.destroy()
+    this.updatePlanetLifeBar(p.actualLife, p.totalLife)
   }
 
   playPianoNote (increment) {
