@@ -90,7 +90,7 @@ export class SimpleScene extends Phaser.Scene {
     this.add.image(Config.width / 2, Config.height / 2, 'background')
 
     // load background music
-    this.sound.volume = 0.2
+    this.sound.volume = 0.1
     this.sound.play('backgroundMusic')
 
     // start screen texts
