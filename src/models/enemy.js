@@ -7,7 +7,7 @@ export class Enemy extends Phaser.GameObjects.Sprite {
     super(game)
     let randomTexture = Phaser.Math.Between(1, 4)
     Phaser.GameObjects.Image.call(this, game, 0, 0, 'enemy_' + randomTexture)
-    this.damage = 10
+    this.damage = 5
     this.speed = Phaser.Math.GetSpeed(Config.width, 0.3)
   }
 
