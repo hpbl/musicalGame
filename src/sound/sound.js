@@ -89,7 +89,7 @@ export class Sound {
       this.scaleNotes.push(this.allNotes[currIndex])
     }
 
-    console.log(tone + ', ' + variation + ', ' + this.scaleNotes)
+    // console.log(tone + ', ' + variation + ', ' + this.scaleNotes)
     return this.scaleNotes
   }
 
