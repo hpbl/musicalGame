@@ -93,6 +93,7 @@ export class SimpleScene extends Phaser.Scene {
     // load background music
     this.sound.volume = 0.1
     this.sound.play('backgroundMusic')
+    console.log(this.sound)
 
     // start screen texts
     this.scaleText = this.add.text(10, 10, '-', { font: 'bold 16px Arial' })
@@ -146,10 +147,20 @@ export class SimpleScene extends Phaser.Scene {
     })
     this.enemyDeathAnimations['planet'] = this.add.group({ defaultKey: 'enemyDeath' })
 
+    this.lastYSpawn = Config.height / 2
     // timer para spawn dos inimigos
-    this.time.addEvent({
-      delay: 1000,
+    this.spawnEnemyTimer = this.time.addEvent({
+      delay: 500,
       callback: this.spawnEnemy,
+      callbackScope: this,
+      loop: true
+    })
+
+    // mudar timer com frequência
+    this.increaseDelay = -1
+    this.changeSpawnEnemyTimer = this.time.addEvent({
+      delay: 1000,
+      callback: this.changeSpawnEnemyDelay,
       callbackScope: this,
       loop: true
     })
@@ -208,12 +219,23 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   spawnEnemy () {
-    this.enemies.get().spawn()
+    this.lastYSpawn = this.enemies.get().spawn(this.lastYSpawn)
+  }
+
+  changeSpawnEnemyDelay () {
+    this.spawnEnemyTimer.delay += (this.increaseDelay * 100)
+    if (this.spawnEnemyTimer.delay <= 100) {
+      this.increaseDelay = 1
+    }
+    if (this.spawnEnemyTimer.delay >= 500) {
+      this.increaseDelay = -1
+    }
+
+    this.changeSpawnEnemyTimer.delay = this.spawnEnemyTimer.delay * 2
   }
 
   bulletHitEnemy (b, e) {
     // trigger enemy death animation, according to the type of bullet used
-    console.log('bulletHitEnemy')
     let enemyDeathAnimation = this.enemyDeathAnimations[b.bulletType].get().setActive(true)
     enemyDeathAnimation.setOrigin(0.5, 0.5)
     enemyDeathAnimation.x = e.x
@@ -233,6 +255,7 @@ export class SimpleScene extends Phaser.Scene {
     enemyDeathAnimation.play('enemyDeath')
 
     if (p.enemyHit(e.damage)) {
+      this.sound.pauseAll()
       this.scene.start('end')
     }
     e.destroy()
