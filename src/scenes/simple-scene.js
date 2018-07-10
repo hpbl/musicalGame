@@ -68,6 +68,7 @@ export class SimpleScene extends Phaser.Scene {
     this.load.image('bullet_THIRD', 'assets/bullet_THIRD.png')
     this.load.image('bullet_FIFTH', 'assets/bullet_FIFTH.png')
     this.load.image('bullet_SEVENTH', 'assets/bullet_SEVENTH.png')
+    this.load.spritesheet('enemyDeath', 'assets/enemyDeath.png', { frameWidth: 128, frameHeight: 128 })
     this.load.image('planet', 'assets/planet2.png')
     this.load.image('enemy_1', 'assets/invaders.001.png')
     this.load.image('enemy_2', 'assets/invaders.002.png')
@@ -131,6 +132,19 @@ export class SimpleScene extends Phaser.Scene {
       })
       this.enemyDeathAnimations[BulletType[t]] = this.add.group({ defaultKey: 'enemyDeath' + BulletType[t] })
     }
+
+    // animation for enemy coliding with planet
+    this.anims.create({
+      key: 'enemyDeath',
+      frames: this.anims.generateFrameNumbers('enemyDeath', {
+        start: 0,
+        end: 15
+      }),
+      frameRate: 16,
+      repeat: 0,
+      hideOnComplete: true
+    })
+    this.enemyDeathAnimations['planet'] = this.add.group({ defaultKey: 'enemyDeath' })
 
     // timer para spawn dos inimigos
     this.time.addEvent({
@@ -212,6 +226,12 @@ export class SimpleScene extends Phaser.Scene {
   }
 
   enemyHitPlanet (p, e) {
+    let enemyDeathAnimation = this.enemyDeathAnimations['planet'].get().setActive(true)
+    enemyDeathAnimation.setOrigin(0.5, 0.5)
+    enemyDeathAnimation.x = e.x
+    enemyDeathAnimation.y = e.y
+    enemyDeathAnimation.play('enemyDeath')
+
     if (p.enemyHit(e.damage)) {
       this.scene.start('end')
     }
