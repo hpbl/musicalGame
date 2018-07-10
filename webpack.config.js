@@ -8,7 +8,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'app.bundle.js'
   },
 
@@ -28,18 +28,18 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
+    contentBase: path.resolve(__dirname, 'docs'),
   },
 
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'index.html'),
-        to: path.resolve(__dirname, 'build')
+        from: path.resolve(__dirname, 'src/index.html'),
+        to: path.resolve(__dirname, 'docs')
       },
       {
         from: path.resolve(__dirname, 'assets', '**', '*'),
-        to: path.resolve(__dirname, 'build')
+        to: path.resolve(__dirname, 'docs')
       }
     ]),
     new webpack.DefinePlugin({
