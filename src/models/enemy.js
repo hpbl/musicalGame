@@ -13,13 +13,13 @@ export class Enemy extends Phaser.GameObjects.Sprite {
 
   // spawn dos monstros no canto esquerdo e alturas randomicas
   spawn (lastYSpawn) {
-    let newYSpawn = Phaser.Math.Between(Math.max(0, lastYSpawn - 50), Math.min(Config.height, lastYSpawn + 50))
-    let outlierYSpawn = Phaser.Math.Between(0, 100)
+    let newYSpawn = Phaser.Math.Between(Math.max(60, lastYSpawn - 50), Math.min(Config.height - 60, lastYSpawn + 50))
+    let outlierYSpawn = Phaser.Math.Between(0, 10)
     if (outlierYSpawn === 0) {
-      newYSpawn = Math.max(0, lastYSpawn - 200)
+      newYSpawn = Math.max(60, lastYSpawn - 200)
     }
     if (outlierYSpawn === 1) {
-      newYSpawn = Math.min(Config.height, lastYSpawn + 200)
+      newYSpawn = Math.min(Config.height - 60, lastYSpawn + 200)
     }
 
     this.setScale(0.2, 0.2)

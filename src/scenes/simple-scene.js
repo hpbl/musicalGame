@@ -151,9 +151,11 @@ export class SimpleScene extends Phaser.Scene {
     this.enemyDeathAnimations['planet'] = this.add.group({ defaultKey: 'enemyDeath' })
 
     this.lastYSpawn = Config.height / 2
+    this.currentMinDelay = 100
+    this.currentMaxDelay = 500
     // timer para spawn dos inimigos
     this.spawnEnemyTimer = this.time.addEvent({
-      delay: 500,
+      delay: this.currentMaxDelay,
       callback: this.spawnEnemy,
       callbackScope: this,
       loop: true
@@ -240,11 +242,12 @@ export class SimpleScene extends Phaser.Scene {
 
   changeSpawnEnemyDelay () {
     this.spawnEnemyTimer.delay += (this.increaseDelay * 100)
-    if (this.spawnEnemyTimer.delay <= 100) {
+    if (this.spawnEnemyTimer.delay <= this.currentMinDelay) {
       this.increaseDelay = 1
     }
-    if (this.spawnEnemyTimer.delay >= 500) {
+    if (this.spawnEnemyTimer.delay >= this.currentMaxDelay) {
       this.increaseDelay = -1
+      this.currentMaxDelay = (Math.max(100, this.currentMaxDelay - 10))
     }
 
     this.changeSpawnEnemyTimer.delay = this.spawnEnemyTimer.delay * 2
