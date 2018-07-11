@@ -40,4 +40,6 @@ jobs:
       # Build app for production
       - run: yarn run webpack -p
 
+      - run: ./scripts/deploy-ghpages.sh build
+
 
